@@ -352,6 +352,19 @@ a.pp:hover .li{text-decoration:underline}
 .tools svg{flex:none;color:var(--ink)}
 .tm{margin-top:14px;font-size:13px;color:var(--ink3)}
 @media(max-width:600px){.tools li{flex:1 1 100%;padding:12px 16px;font-size:17px}}
+.qz{text-align:center}
+.qz h2{font-size:clamp(30px,5vw,48px)}
+.qz .qsub{font-family:var(--disp);font-weight:800;font-size:clamp(22px,3.4vw,32px);letter-spacing:-.02em;color:var(--or);margin-top:8px}
+.qz .sub{max-width:620px;margin-left:auto;margin-right:auto}
+.ours{margin-top:34px;background:var(--dark);color:#fff;border-radius:20px;padding:28px 26px}
+.ours h3{font-size:clamp(22px,3vw,28px);color:#fff}
+.ours>p{margin-top:10px;color:#D9DBEF}
+.nums4{display:grid;gap:18px 22px;margin-top:22px;grid-template-columns:1fr 1fr}
+@media(min-width:860px){.nums4{grid-template-columns:repeat(4,1fr)}}
+.nums4 b{display:block;font-family:var(--disp);font-weight:800;font-size:clamp(24px,2.6vw,30px);letter-spacing:-.03em;line-height:1.1;color:#FF7A2F;white-space:nowrap}
+.nums4 span{display:block;margin-top:6px;font-size:14.5px;line-height:1.35;color:#C9CCE6}
+.ours .tm{color:#8E93BA}
+@media(max-width:600px){.ours{padding:22px 18px}}
 </style>
 </head>
 <body>
@@ -380,6 +393,13 @@ a.pp:hover .li{text-decoration:underline}
 </div>
 <div class="cta"><a class="btn big" href="#analyza">Chci konzultaci zdarma</a></div>
 <p class="micro">30 minut, zdarma. Začíná pěti otázkami na dvě minuty.</p>
+</div></section>
+
+<section class="white" id="otazka"><div class="wrap qz">
+<p class="eyebrow">Otázka na začátek</p>
+<h2>Co vás na vaší práci nejvíc nebaví?</h2>
+<p class="qsub">A proč to ještě děláte…</p>
+<p class="sub">S AI dnes pracuje skoro každý, ale končí to u jednotlivců. Každý si pomáhá sám a firma si z toho nic neuloží.</p>
 </div></section>
 
 <section id="obory"><div class="wrap">
@@ -472,6 +492,24 @@ a.pp:hover .li{text-decoration:underline}
 </div>
 </div></section>
 
+<section id="pro-koho"><div class="wrap">
+<p class="eyebrow">Narovinu</p>
+<h2>Není to pro každého.</h2>
+<p class="sub">Nepovedená zakázka je ztráta pro obě strany. Proto to říkáme dopředu.</p>
+<div class="fit">
+<article class="card yes"><h3>Dává to smysl, když</h3><ul>
+<li>S AI u vás lidé už pracují, ale každý sám.</li>
+<li>Máte opakovanou práci, která stojí na znalostech v hlavách lidí.</li>
+<li>Máte jednoho člověka, který si to vezme za své.</li>
+<li>Chcete, aby u vás něco běželo i bez vás.</li></ul></article>
+<article class="card nope"><h3>Nedává to smysl, když</h3><ul>
+<li>Hledáte jen „AI strategii". Tu neděláme, končíme něčím, co běží.</li>
+<li>Nechcete měnit, jak se u vás pracuje.</li>
+<li>Nemáte komu to po zavedení předat.</li>
+<li>Je vás pod patnáct. Tam nabídneme jen diagnostiku.</li></ul></article>
+</div>
+</div></section>
+
 <section class="white" id="otazky"><div class="wrap">
 <p class="eyebrow">Časté otázky</p>
 <h2>Na co se ptáte nejčastěji.</h2>
@@ -479,12 +517,16 @@ a.pp:hover .li{text-decoration:underline}
 <details><summary>Co je AI agent?</summary><p>Program, který dostane úkol, sám si najde podklady ve vašich systémech, připraví výsledek a pošle ho ke schválení. Nečeká na otázku jako chatbot, pracuje sám podle plánu.</p></details>
 <details><summary>Čím se AI agent liší od běžné automatizace?</summary><p>Běžná automatizace opakuje jeden krok podle pevných pravidel. Agent si poradí i s textem a výjimkami: přečte e‑mail nebo doklad, navrhne, co s ním, a nejasné případy nechá na člověku.</p></details>
 <details><summary>Nahradí AI agenti zaměstnance?</summary><p>Ne. Agent práci připraví a člověk ji zkontroluje a schválí. Lidem ubude rutina a zbude jim čas na práci, kde je potřeba úsudek.</p></details>
+<details><summary>Co když agent udělá chybu?</summary><p>K zákazníkovi nejde nic bez schválení člověka: agent navrhuje, vy schvalujete. Samostatnost mu přidáváme po oblastech, až když má za sebou řadu schválených výstupů.</p></details>
+<details><summary>Co když agent něco neví?</summary><p>Řekne „nevím“ a nechá to na vás. Nevymýšlí si a nemlčí. Když ve firemních znalostech chybí pravidlo, navrhne ho dopsat.</p></details>
+<details><summary>Kde jsou naše data?</summary><p>Ve vašich nástrojích a ve vašich účtech. Agent čte jen systémy, které mu sami napojíte, a zapsané know‑how patří vám.</p></details>
+<details><summary>Kolik času to chce od nás?</summary><p>Konzultaci, první analýzu a pak průběžné schvalování návrhů. Nejvíc času to chce první týdny, kdy agenty ladíme na vaši firmu.</p></details>
 <details><summary>Kam agent posílá výsledky?</summary><p>Do Slacku nebo e‑mailu. Tam je schválíte, upravíte, nebo vrátíte.</p></details>
 <details><summary>Pro jakou firmu to dává smysl?</summary><p>Pro firmu, kde se každý týden opakuje stejná ruční práce: doklady, dotazy zákazníků, nabídky, reporty nebo upomínky. Jestli je to váš případ, zjistíte na konzultaci.</p></details>
 <details><summary>Kolik to stojí?</summary><p>Úvodní konzultace na 30 minut je zdarma. První analýza má cenu podle rozsahu a nabídku na zavedení dostanete až po ní.</p></details>
 </div>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Co je AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Program, který dostane úkol, sám si najde podklady ve vašich systémech, připraví výsledek a pošle ho ke schválení. Nečeká na otázku jako chatbot, pracuje sám podle plánu."}}, {"@type": "Question", "name": "Čím se AI agent liší od běžné automatizace?", "acceptedAnswer": {"@type": "Answer", "text": "Běžná automatizace opakuje jeden krok podle pevných pravidel. Agent si poradí i s textem a výjimkami: přečte e‑mail nebo doklad, navrhne, co s ním, a nejasné případy nechá na člověku."}}, {"@type": "Question", "name": "Nahradí AI agenti zaměstnance?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Agent práci připraví a člověk ji zkontroluje a schválí. Lidem ubude rutina a zbude jim čas na práci, kde je potřeba úsudek."}}, {"@type": "Question", "name": "Kam agent posílá výsledky?", "acceptedAnswer": {"@type": "Answer", "text": "Do Slacku nebo e‑mailu. Tam je schválíte, upravíte, nebo vrátíte."}}, {"@type": "Question", "name": "Pro jakou firmu to dává smysl?", "acceptedAnswer": {"@type": "Answer", "text": "Pro firmu, kde se každý týden opakuje stejná ruční práce: doklady, dotazy zákazníků, nabídky, reporty nebo upomínky. Jestli je to váš případ, zjistíte na konzultaci."}}, {"@type": "Question", "name": "Kolik to stojí?", "acceptedAnswer": {"@type": "Answer", "text": "Úvodní konzultace na 30 minut je zdarma. První analýza má cenu podle rozsahu a nabídku na zavedení dostanete až po ní."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Co je AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Program, který dostane úkol, sám si najde podklady ve vašich systémech, připraví výsledek a pošle ho ke schválení. Nečeká na otázku jako chatbot, pracuje sám podle plánu."}}, {"@type": "Question", "name": "Čím se AI agent liší od běžné automatizace?", "acceptedAnswer": {"@type": "Answer", "text": "Běžná automatizace opakuje jeden krok podle pevných pravidel. Agent si poradí i s textem a výjimkami: přečte e‑mail nebo doklad, navrhne, co s ním, a nejasné případy nechá na člověku."}}, {"@type": "Question", "name": "Nahradí AI agenti zaměstnance?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Agent práci připraví a člověk ji zkontroluje a schválí. Lidem ubude rutina a zbude jim čas na práci, kde je potřeba úsudek."}}, {"@type": "Question", "name": "Co když agent udělá chybu?", "acceptedAnswer": {"@type": "Answer", "text": "K zákazníkovi nejde nic bez schválení člověka: agent navrhuje, vy schvalujete. Samostatnost mu přidáváme po oblastech, až když má za sebou řadu schválených výstupů."}}, {"@type": "Question", "name": "Co když agent něco neví?", "acceptedAnswer": {"@type": "Answer", "text": "Řekne „nevím“ a nechá to na vás. Nevymýšlí si a nemlčí. Když ve firemních znalostech chybí pravidlo, navrhne ho dopsat."}}, {"@type": "Question", "name": "Kde jsou naše data?", "acceptedAnswer": {"@type": "Answer", "text": "Ve vašich nástrojích a ve vašich účtech. Agent čte jen systémy, které mu sami napojíte, a zapsané know‑how patří vám."}}, {"@type": "Question", "name": "Kolik času to chce od nás?", "acceptedAnswer": {"@type": "Answer", "text": "Konzultaci, první analýzu a pak průběžné schvalování návrhů. Nejvíc času to chce první týdny, kdy agenty ladíme na vaši firmu."}}, {"@type": "Question", "name": "Kam agent posílá výsledky?", "acceptedAnswer": {"@type": "Answer", "text": "Do Slacku nebo e‑mailu. Tam je schválíte, upravíte, nebo vrátíte."}}, {"@type": "Question", "name": "Pro jakou firmu to dává smysl?", "acceptedAnswer": {"@type": "Answer", "text": "Pro firmu, kde se každý týden opakuje stejná ruční práce: doklady, dotazy zákazníků, nabídky, reporty nebo upomínky. Jestli je to váš případ, zjistíte na konzultaci."}}, {"@type": "Question", "name": "Kolik to stojí?", "acceptedAnswer": {"@type": "Answer", "text": "Úvodní konzultace na 30 minut je zdarma. První analýza má cenu podle rozsahu a nabídku na zavedení dostanete až po ní."}}]}
 </script>
 </div></section>
 
@@ -504,6 +546,17 @@ a.pp:hover .li{text-decoration:underline}
 <p class="n">Co ještě ladíme</p>
 <ul class="todo"><li>Předávání práce mezi agenty bez člověka uprostřed</li></ul>
 </div>
+</div>
+<div class="ours">
+<h3>Zdvojnásobili jsme kapacitu firmy. Lidí je stejně.</h3>
+<p>V LOCO je pět lidí. Agenti k nim každý měsíc přidají práci zhruba za další čtyři až osm.</p>
+<div class="nums4">
+<div><b>600–1 300 h</b><span>práce agentů měsíčně</span></div>
+<div><b>100+</b><span>akcí agentů každý pracovní den</span></div>
+<div><b>~40</b><span>obchodních e‑mailů týdně připravených ke schválení</span></div>
+<div><b>40+</b><span>připravených odpovědí zákazníkům týdně</span></div>
+</div>
+<p class="tm">Zaokrouhlené průměry z vlastního měření v LOCO, listopad 2026.</p>
 </div>
 </div></section>
 </main>
