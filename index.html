@@ -571,5 +571,80 @@ function done(v){
 render();
 })();
 </script>
+<!-- Měření návštěvnosti se souhlasem. Vkládá build_com.py před </body>, jen když je vyplněné aspoň jedno ID. -->
+<style>
+.cbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;max-width:760px;margin:0 auto;display:flex;gap:14px 20px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:14px 16px;border-radius:16px;background:var(--dark);color:#fff;box-shadow:0 18px 50px rgba(16,20,58,.35);font-size:14.5px;line-height:1.45}
+.cbar[hidden]{display:none}
+.cbar p{margin:0;flex:1 1 300px;color:#E4E6F5}
+.cbar div{display:flex;gap:8px;flex:0 0 auto}
+.cbar button{font:inherit;font-weight:700;font-size:14.5px;border-radius:10px;padding:10px 16px;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.55);background:transparent;color:#fff}
+.cbar button.yes{background:#fff;border-color:#fff;color:var(--ink)}
+.cset{font:inherit;font-size:inherit;color:var(--or2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+@media(max-width:520px){.cbar{left:8px;right:8px;bottom:8px;padding:12px;font-size:13.5px}.cbar p{flex-basis:100%}.cbar div{width:100%}.cbar button{flex:1;padding:10px 8px;font-size:14px}}
+</style>
+<div class="cbar" id="cbar" hidden role="region" aria-label="Souhlas s měřením návštěvnosti">
+<p>Chceme vědět, co na webu funguje. S vaším souhlasem zapneme měření návštěvnosti (<span id="cTools"></span>). Bez souhlasu se nic z toho nenačte.</p>
+<div><button type="button" id="cNo">Odmítnout</button><button type="button" id="cYes" class="yes">Povolit měření</button></div>
+</div>
+<script>
+/* Měření: Google Analytics 4 a Microsoft Clarity se načtou až po souhlasu návštěvníka. */
+(function(){
+  var GA="", CL="zgnnvzzaz3", KEY="f22_mereni";
+  if(!GA && !CL) return;
+  if(location.hostname!=="fundament22.com") return;
+  var bar=document.getElementById("cbar"), loaded=false;
+  document.getElementById("cTools").textContent=[GA&&"Google Analytics",CL&&"Microsoft Clarity"].filter(Boolean).join(" a ");
+  function get(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
+  function set(v){ try{ localStorage.setItem(KEY,v); }catch(e){} }
+  function load(){
+    if(loaded) return; loaded=true;
+    if(GA){
+      window.dataLayer=window.dataLayer||[];
+      window.gtag=function(){ dataLayer.push(arguments); };
+      gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"granted"});
+      gtag("js",new Date());
+      gtag("config",GA);
+      var s=document.createElement("script"); s.async=true;
+      s.src="https://www.googletagmanager.com/gtag/js?id="+encodeURIComponent(GA);
+      document.head.appendChild(s);
+    }
+    if(CL){
+      (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CL);
+      window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"granted"});
+    }
+  }
+  function forget(){
+    var names=document.cookie.split(";").map(function(c){ return c.split("=")[0].trim(); });
+    names.forEach(function(n){
+      if(/^(_ga|_clck|_clsk)/.test(n)){
+        document.cookie=n+"=; Max-Age=0; path=/";
+        document.cookie=n+"=; Max-Age=0; path=/; domain=.fundament22.com";
+      }
+    });
+  }
+  document.getElementById("cYes").addEventListener("click",function(){ set("yes"); bar.hidden=true; load(); });
+  document.getElementById("cNo").addEventListener("click",function(){
+    var was=get(); set("no"); bar.hidden=true;
+    if(was==="yes"){ forget(); location.reload(); }
+  });
+  /* Odkaz v patičce, kterým jde volbu kdykoli změnit. */
+  var foot=document.querySelector("footer .wrap span:last-child");
+  if(foot){
+    var b=document.createElement("button"); b.type="button"; b.className="cset"; b.id="cSet"; b.textContent="Nastavení měření";
+    b.addEventListener("click",function(){ bar.hidden=false; });
+    foot.appendChild(document.createTextNode(" · ")); foot.appendChild(b);
+  }
+  /* Události: klik na tlačítko konzultace a na odkaz do kalendáře. */
+  document.addEventListener("click",function(e){
+    if(!window.gtag || !e.target.closest) return;
+    var a=e.target.closest("a[href]"); if(!a) return;
+    var h=a.getAttribute("href")||"";
+    if(h==="#analyza") gtag("event","cta_konzultace");
+    else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
+  });
+  var v=get();
+  if(v==="yes") load(); else if(v!=="no") bar.hidden=false;
+})();
+</script>
 </body>
 </html>
