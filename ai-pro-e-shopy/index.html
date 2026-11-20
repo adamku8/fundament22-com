@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI pro e‑shopy: zákaznická podpora, reporty a reklama | Fundament 22</title>
+<title>AI pro e‑shopy: automatizace zákaznické podpory a reportů | Fundament 22</title>
 <meta name="description" content="AI pro e‑shopy a retail. AI agenti připraví odpovědi zákaznické podpory, ranní přehled obratu a kontrolu reklamy, vy schvalujete. Konzultace zdarma.">
 <meta name="keywords" content="AI pro e-shop, AI pro e-shopy, AI v e-commerce, automatizace zákaznické podpory, chatbot pro e-shop, AI zákaznická podpora, AI agenti pro e-shop, AI automatizace">
 <meta name="robots" content="noindex, nofollow">
@@ -317,7 +317,7 @@ footer a{color:#C9CCE6}
 
 <section id="ukoly"><div class="wrap">
 <p class="eyebrow">Co agenti připraví</p>
-<h2>Co agenti v e‑shopu připraví.</h2>
+<h2>Automatizace zákaznické podpory a další práce v e‑shopu.</h2>
 <div class="uc6">
 <article class="card"><p class="n">01</p><h3>Odpovědi zákaznické podpory</h3><p>U každého dotazu čeká návrh odpovědi s údaji z objednávky. Schválíte ho, upravíte, nebo vrátíte.</p></article>
 <article class="card"><p class="n">02</p><h3>Ranní přehled obratu po zemích</h3><p>Každé ráno shrnutí tržeb a výkyvů za včerejšek. Bez otevírání pěti nástrojů.</p></article>
@@ -464,7 +464,7 @@ footer a{color:#C9CCE6}
     if(!window.gtag || !e.target.closest) return;
     var a=e.target.closest("a[href]"); if(!a) return;
     var h=a.getAttribute("href")||"";
-    if(h==="#analyza") gtag("event","cta_konzultace");
+    if(/#analyza$/.test(h)) gtag("event","cta_konzultace");
     else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
   });
   var v=get();

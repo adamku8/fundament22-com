@@ -310,14 +310,14 @@ footer a{color:#C9CCE6}
 <section class="hero"><div class="wrap">
 <p class="crumbs"><a href="/">Fundament 22</a> / Profesní služby</p>
 <h1>AI pro profesní služby</h1>
-<p class="lead">Účetní, advokátní a poradenské kanceláře, personalisté i agentury. Agent připraví zápisy a podklady a hlídá termíny. <b>Vy schvalujete.</b></p>
+<p class="lead">Účetní, advokátní a poradenské kanceláře, personalisté i agentury. Agent pracuje jako AI asistent celé kanceláře: připraví zápisy a podklady a hlídá termíny. <b>Vy schvalujete.</b></p>
 <div class="cta"><a class="btn big" href="/#analyza">Chci konzultaci zdarma</a></div>
 <p class="micro">30 minut, zdarma. Začíná pěti otázkami na dvě minuty.</p>
 </div></section>
 
 <section id="ukoly"><div class="wrap">
 <p class="eyebrow">Co agenti připraví</p>
-<h2>Co agenti v kanceláři připraví.</h2>
+<h2>Automatizace procesů v kanceláři: co agenti připraví.</h2>
 <div class="uc6">
 <article class="card"><p class="n">01</p><h3>Zápisy ze schůzek a follow‑upy</h3><p>Po schůzce máte zápis, úkoly a návrh zprávy klientovi. Stačí ji zkontrolovat a odeslat.</p></article>
 <article class="card"><p class="n">02</p><h3>Třídění pošty a úkolů</h3><p>Příchozí zprávy roztřídí podle klienta a naléhavosti a navrhne, co s nimi.</p></article>
@@ -348,7 +348,7 @@ footer a{color:#C9CCE6}
 <p class="eyebrow">Podle profese</p>
 <h2>Vyberte si svůj obor.</h2>
 <div class="subs">
-<a class="card" href="/ai-pro-ucetni/"><h3>Účetní a daňové kanceláře</h3><p>Agent přečte přijaté faktury a doklady, zařadí je a připraví k zaúčtování. Účetní je zkontroluje a schválí.</p><span class="go">AI pro účetní a daňové kanceláře →</span></a>
+<a class="card" href="/ai-pro-ucetni/"><h3>Účetní a daňové kanceláře</h3><p>Digitalizace účetnictví bez ruční práce: agent přečte přijaté faktury a doklady, zařadí je a připraví k zaúčtování. Účetní je zkontroluje a schválí.</p><span class="go">AI pro účetní a daňové kanceláře →</span></a>
 <a class="card" href="/ai-pro-advokaty/"><h3>Advokáti a právníci</h3><p>Agent hlídá lhůty, třídí poštu a připraví podklady i první návrhy. Právník rozhoduje a odpovídá za výsledek.</p><span class="go">AI pro advokáty a právníky →</span></a>
 <a class="card" href="/ai-v-hr/"><h3>HR a nábor</h3><p>Agent roztřídí reakce na inzeráty, připraví odpovědi uchazečům a podklady k pohovorům. Rozhodují personalisté.</p><span class="go">AI v HR a náboru →</span></a>
 <a class="card" href="/ai-pro-marketingove-agentury/"><h3>Marketingové agentury</h3><p>Agent připraví klientské reporty, zápisy ze schůzek a podklady k fakturaci. Tým má víc času na klienty.</p><span class="go">AI pro marketingové agentury →</span></a>
@@ -474,7 +474,7 @@ footer a{color:#C9CCE6}
     if(!window.gtag || !e.target.closest) return;
     var a=e.target.closest("a[href]"); if(!a) return;
     var h=a.getAttribute("href")||"";
-    if(h==="#analyza") gtag("event","cta_konzultace");
+    if(/#analyza$/.test(h)) gtag("event","cta_konzultace");
     else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
   });
   var v=get();

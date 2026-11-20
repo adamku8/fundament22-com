@@ -317,7 +317,7 @@ footer a{color:#C9CCE6}
 
 <section id="ukoly"><div class="wrap">
 <p class="eyebrow">Co agenti připraví</p>
-<h2>Co agenti v HR připraví.</h2>
+<h2>AI v náboru a personalistice: co agenti připraví.</h2>
 <div class="uc6">
 <article class="card"><p class="n">01</p><h3>Přehled reakcí na inzeráty</h3><p>Reakce shrne podle kritérií, která mu zadáte. Koho pozvat, rozhodujete vy.</p></article>
 <article class="card"><p class="n">02</p><h3>Odpovědi uchazečům</h3><p>Připraví odpovědi a pozvánky, aby nikdo nezůstal bez reakce.</p></article>
@@ -464,7 +464,7 @@ footer a{color:#C9CCE6}
     if(!window.gtag || !e.target.closest) return;
     var a=e.target.closest("a[href]"); if(!a) return;
     var h=a.getAttribute("href")||"";
-    if(h==="#analyza") gtag("event","cta_konzultace");
+    if(/#analyza$/.test(h)) gtag("event","cta_konzultace");
     else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
   });
   var v=get();

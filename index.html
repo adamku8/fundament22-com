@@ -664,7 +664,7 @@ render();
     if(!window.gtag || !e.target.closest) return;
     var a=e.target.closest("a[href]"); if(!a) return;
     var h=a.getAttribute("href")||"";
-    if(h==="#analyza") gtag("event","cta_konzultace");
+    if(/#analyza$/.test(h)) gtag("event","cta_konzultace");
     else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
   });
   var v=get();

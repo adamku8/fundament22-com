@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI pro účetní: vytěžování faktur a automatizace účetnictví | Fundament 22</title>
+<title>AI pro účetní: vytěžování faktur a digitalizace účetnictví | Fundament 22</title>
 <meta name="description" content="AI pro účetní a daňové kanceláře. Agent přečte faktury a doklady, zařadí je a připraví k zaúčtování, účetní schvaluje. Konzultace 30 minut zdarma.">
 <meta name="keywords" content="AI pro účetní, AI v účetnictví, vytěžování faktur, automatizace faktur, automatizace účetnictví, digitalizace účetnictví, AI účetní, AI pro daňové poradce">
 <meta name="robots" content="noindex, nofollow">
@@ -310,14 +310,14 @@ footer a{color:#C9CCE6}
 <section class="hero"><div class="wrap">
 <p class="crumbs"><a href="/">Fundament 22</a> / <a href="/ai-pro-profesni-sluzby/">Profesní služby</a> / Účetní a daňové kanceláře</p>
 <h1>AI pro účetní a daňové kanceláře</h1>
-<p class="lead">Agent přečte přijaté faktury a doklady, zařadí je a připraví k zaúčtování. <b>Účetní je zkontroluje a schválí.</b></p>
+<p class="lead">Digitalizace účetnictví bez ruční práce: agent přečte přijaté faktury a doklady, zařadí je a připraví k zaúčtování. <b>Účetní je zkontroluje a schválí.</b></p>
 <div class="cta"><a class="btn big" href="/#analyza">Chci konzultaci zdarma</a></div>
 <p class="micro">30 minut, zdarma. Začíná pěti otázkami na dvě minuty.</p>
 </div></section>
 
 <section id="ukoly"><div class="wrap">
 <p class="eyebrow">Co agenti připraví</p>
-<h2>Co agenti v účetní kanceláři připraví.</h2>
+<h2>Automatizace faktur a další práce v účetní kanceláři.</h2>
 <div class="uc6">
 <article class="card"><p class="n">01</p><h3>Vytěžování faktur a dokladů</h3><p>Přečte přijaté faktury a doklady, zařadí je a připraví k zaúčtování. Nejasné označí.</p></article>
 <article class="card"><p class="n">02</p><h3>Párování plateb</h3><p>Navrhne spárování plateb s fakturami a vypíše ty, které nesedí.</p></article>
@@ -464,7 +464,7 @@ footer a{color:#C9CCE6}
     if(!window.gtag || !e.target.closest) return;
     var a=e.target.closest("a[href]"); if(!a) return;
     var h=a.getAttribute("href")||"";
-    if(h==="#analyza") gtag("event","cta_konzultace");
+    if(/#analyza$/.test(h)) gtag("event","cta_konzultace");
     else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
   });
   var v=get();

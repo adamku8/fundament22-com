@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI pro marketingové agentury: reporty, podklady, zápisy | Fundament 22</title>
+<title>AI v marketingu pro agentury: reporty, podklady, zápisy | Fundament 22</title>
 <meta name="description" content="AI pro marketingové agentury. Agent připraví klientské reporty, zápisy ze schůzek a podklady k fakturaci, tým schvaluje. Konzultace 30 minut zdarma.">
 <meta name="keywords" content="AI v marketingu, AI pro marketingové agentury, AI pro agentury, klientské reporty, automatizace reportů, AI automatizace, AI agenti">
 <meta name="robots" content="noindex, nofollow">
@@ -317,7 +317,7 @@ footer a{color:#C9CCE6}
 
 <section id="ukoly"><div class="wrap">
 <p class="eyebrow">Co agenti připraví</p>
-<h2>Co agenti v agentuře připraví.</h2>
+<h2>AI v marketingu: co agenti v agentuře připraví.</h2>
 <div class="uc6">
 <article class="card"><p class="n">01</p><h3>Klientské reporty</h3><p>Z vašich zdrojů sestaví report pro klienta s komentářem. Vy ho zkontrolujete a pošlete.</p></article>
 <article class="card"><p class="n">02</p><h3>Zápisy a follow‑upy</h3><p>Po schůzce s klientem máte zápis, úkoly a návrh shrnutí.</p></article>
@@ -464,7 +464,7 @@ footer a{color:#C9CCE6}
     if(!window.gtag || !e.target.closest) return;
     var a=e.target.closest("a[href]"); if(!a) return;
     var h=a.getAttribute("href")||"";
-    if(h==="#analyza") gtag("event","cta_konzultace");
+    if(/#analyza$/.test(h)) gtag("event","cta_konzultace");
     else if(h.indexOf("calendar.app.google")>-1) gtag("event","klik_kalendar");
   });
   var v=get();
