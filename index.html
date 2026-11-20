@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI agenti pro firmy: konzultace 30 minut zdarma | Fundament 22</title>
-<meta name="description" content="AI agenti připraví doklady, odpovědi zákazníkům, reporty a upomínky. Vy jen kontrolujete a schvalujete. Pět otázek a uvidíte, kde u vás začít. Konzultace 30 minut zdarma.">
+<title>AI pro firmy: AI agenti a automatizace procesů | Fundament 22</title>
+<meta name="description" content="Zavedeme AI do vaší firmy. AI agenti připraví doklady, odpovědi zákazníkům, reporty a upomínky, vy jen schvalujete. Konzultace 30 minut zdarma.">
+<meta name="keywords" content="AI pro firmy, AI agenti, AI agenti pro firmy, AI automatizace, automatizace procesů, automatizace firemních procesů, zavedení AI do firmy, implementace AI, AI asistent, AI konzultace, umělá inteligence pro firmy">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://fundament22.com/">
 <meta property="og:type" content="website">
@@ -67,15 +68,31 @@ section{padding:72px 0}
 @media(min-width:860px){.split{grid-template-columns:1fr 1.05fr}}
 .sub{margin-top:14px;color:var(--ink2)}
 .white{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.queue{background:var(--dark);color:#F3F1FA;border-radius:18px;overflow:hidden;box-shadow:0 24px 60px rgba(21,24,58,.18)}
-.queue .qh{display:flex;justify-content:space-between;gap:10px;padding:13px 18px;border-bottom:1px solid rgba(255,255,255,.1);font-size:13px;color:#A9ADCB}
-.queue .m{display:flex;gap:12px;padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.07)}
-.queue .m:last-child{border-bottom:0}
-.av{flex:none;width:34px;height:34px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-family:var(--disp);font-weight:800;font-size:14px;color:#fff}
-.queue b{font-size:14.5px}.queue time{font-family:var(--mono);font-size:11px;color:#A9ADCB;margin-left:8px}
-.queue .m p{font-size:15px;line-height:1.5;color:#D9DBEF;margin-top:2px}
-.queue .ok{display:inline-block;margin-top:8px;font-size:13px;font-weight:700;color:#fff;background:var(--or);border-radius:8px;padding:5px 10px}
-.queue .no{display:inline-block;margin:8px 0 0 6px;font-size:13px;color:#A9ADCB;border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:4px 10px}
+.queue{position:relative;background:linear-gradient(180deg,#191D4F,#10143A);color:#F3F1FA;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(21,24,58,.28)}
+.queue::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.queue .qh{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:15px 18px 13px;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px;color:#A9ADCB}
+.queue .ch{display:flex;align-items:center;gap:9px;font-family:var(--mono);color:#E4E6F5}
+.queue .ch i{width:8px;height:8px;border-radius:50%;background:#3DDC97;box-shadow:0 0 0 4px rgba(61,220,151,.18)}
+.queue .st{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:3px 9px}
+.queue .m{display:flex;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.06)}
+.queue .m.hot{background:rgba(255,255,255,.04)}
+.queue .mb{flex:1;min-width:0}
+.queue .mh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.av{flex:none;width:36px;height:36px;border-radius:10px;background:var(--grad);display:grid;place-items:center;font-family:var(--disp);font-weight:800;font-size:14px;color:#fff}
+.av.b{background:linear-gradient(135deg,#6C8CFF,#3B5BDB)}.av.g{background:linear-gradient(135deg,#3DDC97,#12936A)}
+.queue b{font-size:14.5px}.queue time{font-family:var(--mono);font-size:11px;color:#A9ADCB}
+.queue .chip{font-family:var(--mono);font-size:11px;color:#FFB27A;background:rgba(255,154,61,.13);border-radius:6px;padding:2px 7px}
+.queue .m p{font-size:15px;line-height:1.5;color:#D9DBEF;margin-top:4px}
+.queue .act{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.queue .ok{font-size:13px;font-weight:700;color:#fff;background:var(--or);border-radius:8px;padding:6px 11px;box-shadow:0 6px 16px rgba(232,84,26,.32)}
+.queue .no{font-size:13px;color:#C9CCE6;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:5px 11px}
+.queue .qf{padding:12px 18px;font-size:13px;color:#A9ADCB;background:rgba(0,0,0,.2)}
+.queue .qf b{color:#fff;font-size:13px}
+.queue.anim .m{opacity:0;transform:translateY(12px)}
+.queue.anim.in .m{opacity:1;transform:none;transition:opacity .5s ease,transform .5s ease}
+.queue.anim.in .m:nth-child(3){transition-delay:.3s}.queue.anim.in .m:nth-child(4){transition-delay:.6s}
+.ob h3 a{color:inherit;text-decoration:none}.ob h3 a:hover{color:var(--or2)}
+.ob .more{display:inline-block;margin-top:14px;font-weight:700;font-size:15px;text-decoration:none}
 .grid3{display:grid;gap:16px;margin-top:34px}
 @media(min-width:760px){.grid3{grid-template-columns:repeat(3,1fr)}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
@@ -258,7 +275,7 @@ footer a{color:#C9CCE6}
 </head>
 <body>
 <header class="top"><div class="wrap">
-<a class="logo" href="./" aria-label="FUNDAMENT22 AI"><svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#E8541A"/><path d="M9.5 18.5L18.5 9.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="9.5" cy="18.5" r="3.6" fill="#fff"/><circle cx="18.5" cy="9.5" r="3.6" fill="#15183A"/></svg><span>FUNDAMENT22 <span class="ai">AI</span></span></a>
+<a class="logo" href="./" aria-label="FUNDAMENT22"><svg viewBox="0 0 28 28" width="26" height="26" aria-hidden="true"><rect width="28" height="28" rx="8" fill="#E8541A"/><path d="M9.5 18.5L18.5 9.5" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/><circle cx="9.5" cy="18.5" r="3.6" fill="#fff"/><circle cx="18.5" cy="9.5" r="3.6" fill="#15183A"/></svg><span>FUNDAMENT22</span></a>
 <a class="btn sm" href="#analyza">Konzultace zdarma</a>
 </div></header>
 
@@ -288,12 +305,12 @@ footer a{color:#C9CCE6}
 <p class="eyebrow">Obory</p>
 <h2>Kde to umíme zavést.</h2>
 <div class="grid3 ob">
-<article class="card"><h3>E‑commerce a retail</h3><ul>
-<li>Odpovědi zákaznické podpory</li><li>Ranní přehled obratu po zemích</li><li>Kontrola PPC agentury</li><li>Překlady a ceny v mutacích</li></ul></article>
-<article class="card"><h3>Profesní služby</h3><ul>
-<li>Zápisy ze schůzek a follow‑upy</li><li>Třídění pošty a úkolů</li><li>Hlídání termínů a lhůt</li><li>Podklady k fakturaci</li></ul></article>
-<article class="card"><h3>Výroba a velkoobchod</h3><ul>
-<li>Nabídky z poptávek</li><li>Podklady k reklamacím</li><li>Přehled objednávek a skladu</li><li>Upomínky pohledávek</li></ul></article>
+<article class="card"><h3><a href="https://fundament22.com/ai-pro-e-shopy/">E‑commerce a retail</a></h3><ul>
+<li>Odpovědi zákaznické podpory</li><li>Ranní přehled obratu po zemích</li><li>Kontrola PPC agentury</li><li>Překlady a ceny v mutacích</li></ul><a class="more" href="https://fundament22.com/ai-pro-e-shopy/">AI pro e‑shopy podrobně →</a></article>
+<article class="card"><h3><a href="https://fundament22.com/ai-pro-profesni-sluzby/">Profesní služby</a></h3><ul>
+<li>Zápisy ze schůzek a follow‑upy</li><li>Třídění pošty a úkolů</li><li>Hlídání termínů a lhůt</li><li>Podklady k fakturaci</li></ul><a class="more" href="https://fundament22.com/ai-pro-profesni-sluzby/">Účetní, advokáti, HR, agentury →</a></article>
+<article class="card"><h3><a href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">Výroba a velkoobchod</a></h3><ul>
+<li>Nabídky z poptávek</li><li>Podklady k reklamacím</li><li>Přehled objednávek a skladu</li><li>Upomínky pohledávek</li></ul><a class="more" href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě podrobně →</a></article>
 </div>
 <p class="est">Podnikáte v jiném oboru? Projdeme to spolu na konzultaci.</p>
 <div class="cta"><a class="btn big" href="#analyza">Chci konzultaci zdarma</a></div>
@@ -307,10 +324,11 @@ footer a{color:#C9CCE6}
 <p class="sub"><a href="https://adamku8.github.io/fundament22/demo/">Prohlédnout ukázku na vymyšleném e‑shopu →</a></p>
 </div>
 <div class="queue" aria-label="Ukázka ranních zpráv od agentů">
-<div class="qh"><span># ranní-fronta</span><span>ukázka</span></div>
-<div class="m"><div class="av">P</div><div><b>Podpora</b><time>06:30</time><p>Devět odpovědí je připravených. Jednu reklamaci nechávám na vás.</p><span class="ok">Schválit 9</span><span class="no">Otevřít</span></div></div>
-<div class="m"><div class="av">O</div><div><b>Obchod</b><time>06:45</time><p>Tři nabídky čekají na ozvání. Zprávy mám nachystané.</p></div></div>
-<div class="m"><div class="av">F</div><div><b>Finance</b><time>07:00</time><p>Tři faktury jsou po splatnosti. Upomínky čekají na schválení.</p></div></div>
+<div class="qh"><span class="ch"><i></i># ranní-fronta</span><span class="st">ukázka</span></div>
+<div class="m hot"><div class="av">P</div><div class="mb"><div class="mh"><b>Podpora</b><time>06:30</time><span class="chip">9 odpovědí</span></div><p>Devět odpovědí je připravených. Jednu reklamaci nechávám na vás.</p><div class="act"><span class="ok">Schválit 9</span><span class="no">Otevřít</span></div></div></div>
+<div class="m"><div class="av b">O</div><div class="mb"><div class="mh"><b>Obchod</b><time>06:45</time><span class="chip">3 nabídky</span></div><p>Tři nabídky čekají na ozvání. Zprávy mám nachystané.</p><div class="act"><span class="ok">Odeslat 3</span><span class="no">Upravit</span></div></div></div>
+<div class="m"><div class="av g">F</div><div class="mb"><div class="mh"><b>Finance</b><time>07:00</time><span class="chip">3 upomínky</span></div><p>Tři faktury jsou po splatnosti. Upomínky čekají na schválení.</p><div class="act"><span class="ok">Schválit 3</span><span class="no">Otevřít</span></div></div></div>
+<div class="qf"><b>Rozhodujete vy:</b> schválit, upravit, nebo vrátit.</div>
 </div>
 </div></section>
 
@@ -334,7 +352,7 @@ footer a{color:#C9CCE6}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>Fundament 22 · Základy firmy pro 22. století</span><span><a href="https://adamku8.github.io/fundament22/">Podrobná verze webu</a> · <a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a> · <a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a></span></div></footer>
+<footer><div class="wrap"><span>Fundament 22 · AI firma pro 22. století</span><span><a href="https://adamku8.github.io/fundament22/">Podrobná verze webu</a> · <a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a> · <a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a></span></div></footer>
 <script>
 /* Posuvník tří příkladů úspory: sám se posouvá, po doteku nebo kliknutí zůstane stát. */
 (function(){
@@ -351,6 +369,13 @@ footer a{color:#C9CCE6}
   addEventListener("resize",()=>go(i,false));
   if(!matchMedia("(prefers-reduced-motion: reduce)").matches)
     timer=setInterval(()=>{ if(!hover && !document.hidden) go(i+1,true); },4500);
+})();
+/* Ranní fronta: zprávy naskočí postupně, když se ukázka dostane na obrazovku. */
+(function(){
+  var q=document.querySelectorAll(".queue");
+  if(!q.length || !("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }); },{threshold:.35});
+  q.forEach(function(el){ el.classList.add("anim"); io.observe(el); });
 })();
 (function(){
 /* ============================================================
