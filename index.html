@@ -368,12 +368,25 @@ a.pp:hover .li{text-decoration:underline}
 .pr .price s{font-size:16px;font-weight:700;color:var(--ink3);margin-right:6px}
 .pr .pn{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--ink3);margin-top:6px}
 .pr h3{font-size:21px}
+.mem{margin:34px 0 0;display:grid;grid-template-columns:1fr auto 1.3fr auto 1fr;gap:10px;align-items:center}
+.mcol{display:grid;gap:8px}
+.mcol .n{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--or2);margin:0 0 2px}
+.mcol span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:15px;font-weight:600}
+.mcore{background:var(--dark);color:#fff;border-radius:18px;padding:22px 16px;text-align:center;box-shadow:0 18px 44px rgba(21,24,58,.22);border-top:3px solid var(--or)}
+.mcore b{display:block;font-family:var(--disp);font-size:22px;letter-spacing:-.02em}
+.mcore small{display:block;margin-top:6px;font-size:13.5px;line-height:1.35;color:#C9CCE6}
+.marr{display:grid;gap:8px;width:34px}
+.marr i{display:block;height:2px;background:var(--or);position:relative}
+.marr i::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:var(--or)}
+.marr i:last-child{transform:scaleX(-1)}
+.mem figcaption{grid-column:1/-1;text-align:center;font-size:14.5px;color:var(--ink3);margin-top:6px}
+@media(max-width:700px){.mem{grid-template-columns:1fr}.marr{width:2px;height:26px;margin:0 auto;display:block;background:var(--or)}.marr i{display:none}.mcol{grid-template-columns:repeat(3,1fr)}.mcol .n{grid-column:1/-1}.mcol span{text-align:center;padding:9px 6px;font-size:14px}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap">
 <a class="logo" href="./" aria-label="FUNDAMENT22"><span class="wm"><b>FUNDAMENT</b><sup>22</sup></span></a>
-<a class="btn sm" href="#analyza">Konzultace zdarma</a>
+<a class="btn sm" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Konzultace zdarma</a>
 </div></header>
 
 <main>
@@ -394,8 +407,8 @@ a.pp:hover .li{text-decoration:underline}
 </div>
 <div class="foot"><span>Odhady, ne měření</span><div class="dots"><button type="button" aria-label="Příklad 1" aria-current="true"></button><button type="button" aria-label="Příklad 2" aria-current="false"></button><button type="button" aria-label="Příklad 3" aria-current="false"></button></div></div>
 </div>
-<div class="cta"><a class="btn big" href="#analyza">Chci konzultaci zdarma</a></div>
-<p class="micro">30 minut, zdarma. Začíná pěti otázkami na dvě minuty.</p>
+<div class="cta"><a class="btn big" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Chci konzultaci zdarma</a></div>
+<p class="micro">30 minut, zdarma. Termín si vyberete v kalendáři.</p>
 </div></section>
 
 <section class="white" id="otazka"><div class="wrap qz">
@@ -423,7 +436,7 @@ a.pp:hover .li{text-decoration:underline}
 <li>Nabídky z poptávek</li><li>Podklady k reklamacím</li><li>Přehled objednávek a skladu</li></ul><a class="more" href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě →</a></article>
 </div>
 <p class="est">Poradenství, architekti a další profese: <a href="https://fundament22.com/ai-pro-profesni-sluzby/">AI pro profesní služby</a>. Jiný obor? Projdeme to spolu na konzultaci.</p>
-<div class="cta"><a class="btn big" href="#analyza">Chci konzultaci zdarma</a></div>
+<div class="cta"><a class="btn big" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Chci konzultaci zdarma</a></div>
 </div></section>
 
 <section class="white"><div class="wrap split">
@@ -445,7 +458,8 @@ a.pp:hover .li{text-decoration:underline}
 <section id="nastroje"><div class="wrap">
 <p class="eyebrow">Nástroje</p>
 <h2>Stavíme na tom, co už používáte.</h2>
-<p class="sub">Nestavíme vlastní uzavřený systém. Přizpůsobíme se nástrojům, které ve firmě už máte.</p>
+<p class="sub">Nestavíme vlastní uzavřený systém. Přizpůsobíme se nástrojům, které ve firmě už máte. Nejdál jsme s Claude, tam nasazujeme hotové nastavení.</p>
+<p class="sub"><a href="https://fundament22.com/skilly/">Jaké skilly v nastavení dostanete →</a></p>
 <ul class="tools">
 <li><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg><span>Claude</span></li>
 <li><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg><span>ChatGPT</span></li>
@@ -470,12 +484,12 @@ a.pp:hover .li{text-decoration:underline}
 <h2>Základy, patra, servis.</h2>
 <p class="sub">Nasadíme vám setup, který běží u nás, a naučíme vás s ním pracovat. Nejdřív to musí fungovat na jedné úloze, pak stavíme dál.</p>
 <div class="grid3 pr">
-<article class="card hl"><p class="n">1 · Základy</p><h3>Úvodní setup</h3><p class="price"><s>90 000 Kč</s> 50 000 Kč</p><p class="pn">zaváděcí cena · workshop 30 000 Kč + první funkční případ 20 000 Kč</p><p>Na workshopu u vás zapíšeme know‑how firmy, napojíme jeden systém a najdeme, kde to nejvíc pálí. Do týdne běží první případ.</p></article>
+<article class="card hl"><p class="n">1 · Základy</p><h3>Úvodní setup</h3><p class="price"><s>90 000 Kč</s> 50 000 Kč</p><p class="pn">zaváděcí cena · workshop 30 000 Kč + první funkční případ 20 000 Kč</p><p>Na workshopu u vás zapíšeme know‑how firmy, napojíme jeden systém a najdeme, kde to nejvíc pálí. Do týdne běží první případ. V ceně je i zkušební přehled firmy na vašich datech.</p></article>
 <article class="card"><p class="n">2 · Patra</p><h3>Další agenti a oddělení</h3><p class="price"><s>40 000 Kč</s> 20 000 Kč</p><p class="pn">zaváděcí cena za jedno patro · po jednom, jak je potřebujete</p><p>Na základy stavíme další patra: agenty a přehledy pro obchod, podporu, finance nebo marketing.</p></article>
 <article class="card"><p class="n">3 · Servis</p><h3>Péče o provoz</h3><p class="price">od 15 000 Kč</p><p class="pn">měsíčně · podle velikosti firmy</p><p>Staráme se, aby to běželo, a vedeme vás novinkami v AI. Co se osvědčí u nás, nasadíme i u vás.</p></article>
 </div>
-<p class="est">Začíná se konzultací na 30 minut. Ta je zdarma a k ničemu vás nezavazuje.</p>
-<div class="cta"><a class="btn big" href="#analyza">Chci konzultaci zdarma</a></div>
+<p class="est">Ceny jsou bez DPH. Začíná se konzultací na 30 minut, ta je zdarma a k ničemu vás nezavazuje.</p>
+<div class="cta"><a class="btn big" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Chci konzultaci zdarma</a></div>
 </div></section>
 
 <section class="az" id="analyza"><div class="in">
@@ -563,6 +577,14 @@ a.pp:hover .li{text-decoration:underline}
 <ul class="todo"><li>Předávání práce mezi agenty bez člověka uprostřed</li></ul>
 </div>
 </div>
+<figure class="mem" aria-label="Lidé i agenti čtou z jedné paměti firmy">
+<div class="mcol"><p class="n">Lidé</p><span>Obchod</span><span>Podpora</span><span>Vedení</span></div>
+<div class="marr" aria-hidden="true"><i></i><i></i></div>
+<div class="mcore"><b>Paměť firmy</b><small>jedno místo, kde je zapsané, co u nás platí</small></div>
+<div class="marr" aria-hidden="true"><i></i><i></i></div>
+<div class="mcol"><p class="n">Agenti</p><span>Obchod</span><span>Support</span><span>Vývoj</span></div>
+<figcaption>Lidé i agenti čtou ze stejného místa a zapisují do něj.</figcaption>
+</figure>
 <div class="ours">
 <h3>Zdvojnásobili jsme kapacitu firmy. Lidí je stejně.</h3>
 <p>V LOCO je pět lidí. Agenti k nim každý měsíc přidají práci zhruba za další čtyři až osm.</p>
@@ -579,12 +601,12 @@ a.pp:hover .li{text-decoration:underline}
 
 <footer><div class="wrap">
 <div class="fcols">
-<div class="fbrand"><span class="wm"><b>FUNDAMENT</b><sup>22</sup></span><p>AI firma pro 22. století. AI agenti a automatizace procesů pro firmy.</p></div>
+<div class="fbrand"><span class="wm"><b>FUNDAMENT</b><sup>22</sup></span><p>Základy firmy pro 22. století. AI agenti a automatizace procesů pro firmy.</p></div>
 <nav aria-label="Obory"><h4>Obory</h4><a href="https://fundament22.com/ai-pro-e-shopy/">AI pro e‑shopy a retail</a><a href="https://fundament22.com/ai-pro-profesni-sluzby/">AI pro profesní služby</a><a href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě a velkoobchodu</a></nav>
 <nav aria-label="Profesní služby"><h4>Profesní služby</h4><a href="https://fundament22.com/ai-pro-ucetni/">AI pro účetní</a><a href="https://fundament22.com/ai-pro-advokaty/">AI pro advokáty a právníky</a><a href="https://fundament22.com/ai-v-hr/">AI v HR a náboru</a><a href="https://fundament22.com/ai-pro-marketingove-agentury/">AI pro marketingové agentury</a></nav>
-<nav aria-label="Kontakt"><h4>Kontakt</h4><a href="#analyza">Konzultace zdarma</a><a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a><a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a><a href="https://adamku8.github.io/fundament22/">Podrobná verze webu</a></nav>
+<nav aria-label="Kontakt"><h4>Kontakt</h4><a href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Konzultace zdarma</a><a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a><a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a><a href="https://fundament22.com/skilly/">Skilly</a></nav>
 </div>
-<div class="fbot"><span>Fundament 22 · AI firma pro 22. století</span><span></span></div>
+<div class="fbot"><span>Fundament 22 · Základy firmy pro 22. století.</span><span></span></div>
 </div></footer>
 <script>
 /* Posuvník tří příkladů úspory: sám se posouvá, po doteku nebo kliknutí zůstane stát. */

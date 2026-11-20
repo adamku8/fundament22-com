@@ -365,6 +365,19 @@ a.pp:hover .li{text-decoration:underline}
 .pr .price s{font-size:16px;font-weight:700;color:var(--ink3);margin-right:6px}
 .pr .pn{font-family:var(--mono);font-size:12px;line-height:1.5;color:var(--ink3);margin-top:6px}
 .pr h3{font-size:21px}
+.mem{margin:34px 0 0;display:grid;grid-template-columns:1fr auto 1.3fr auto 1fr;gap:10px;align-items:center}
+.mcol{display:grid;gap:8px}
+.mcol .n{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--or2);margin:0 0 2px}
+.mcol span{background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:15px;font-weight:600}
+.mcore{background:var(--dark);color:#fff;border-radius:18px;padding:22px 16px;text-align:center;box-shadow:0 18px 44px rgba(21,24,58,.22);border-top:3px solid var(--or)}
+.mcore b{display:block;font-family:var(--disp);font-size:22px;letter-spacing:-.02em}
+.mcore small{display:block;margin-top:6px;font-size:13.5px;line-height:1.35;color:#C9CCE6}
+.marr{display:grid;gap:8px;width:34px}
+.marr i{display:block;height:2px;background:var(--or);position:relative}
+.marr i::after{content:"";position:absolute;right:-1px;top:-4px;border:5px solid transparent;border-left-color:var(--or)}
+.marr i:last-child{transform:scaleX(-1)}
+.mem figcaption{grid-column:1/-1;text-align:center;font-size:14.5px;color:var(--ink3);margin-top:6px}
+@media(max-width:700px){.mem{grid-template-columns:1fr}.marr{width:2px;height:26px;margin:0 auto;display:block;background:var(--or)}.marr i{display:none}.mcol{grid-template-columns:repeat(3,1fr)}.mcol .n{grid-column:1/-1}.mcol span{text-align:center;padding:9px 6px;font-size:14px}}
 </style>
 <style>
 .crumbs{font-size:13.5px;color:var(--ink3);margin:0 0 18px}.crumbs a{color:inherit}
@@ -400,7 +413,7 @@ a.pp:hover .li{text-decoration:underline}
 <body class="lp">
 <header class="top"><div class="wrap">
 <a class="logo" href="/" aria-label="FUNDAMENT22"><span class="wm"><b>FUNDAMENT</b><sup>22</sup></span></a>
-<a class="btn sm" href="/#analyza">Konzultace zdarma</a>
+<a class="btn sm" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Konzultace zdarma</a>
 </div></header>
 
 <main>
@@ -408,8 +421,8 @@ a.pp:hover .li{text-decoration:underline}
 <p class="crumbs"><a href="/">Fundament 22</a> / Výroba a velkoobchod</p>
 <h1>AI ve výrobě a velkoobchodu</h1>
 <p class="lead">Agent připraví nabídky z poptávek, podklady k reklamacím a přehled objednávek, skladu a logistiky. <b>Obchod a provoz jen schvalují.</b></p>
-<div class="cta"><a class="btn big" href="/#analyza">Chci konzultaci zdarma</a></div>
-<p class="micro">30 minut, zdarma. Začíná pěti otázkami na dvě minuty.</p>
+<div class="cta"><a class="btn big" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Chci konzultaci zdarma</a></div>
+<p class="micro">30 minut, zdarma. Termín si vyberete v kalendáři.</p>
 </div></section>
 
 <section id="ukoly"><div class="wrap">
@@ -466,7 +479,7 @@ a.pp:hover .li{text-decoration:underline}
 <section class="band"><div class="wrap">
 <h2>Konzultace 30 minut zdarma.</h2>
 <p>Projdeme, co vás pálí a kterým agentem začít. Bez závazku.</p>
-<div class="cta"><a class="btn big" href="/#analyza">Chci konzultaci zdarma</a></div>
+<div class="cta"><a class="btn big" href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Chci konzultaci zdarma</a></div>
 </div></section>
 
 <section id="obory"><div class="wrap">
@@ -484,12 +497,12 @@ a.pp:hover .li{text-decoration:underline}
 
 <footer><div class="wrap">
 <div class="fcols">
-<div class="fbrand"><span class="wm"><b>FUNDAMENT</b><sup>22</sup></span><p>AI firma pro 22. století. AI agenti a automatizace procesů pro firmy.</p></div>
+<div class="fbrand"><span class="wm"><b>FUNDAMENT</b><sup>22</sup></span><p>Základy firmy pro 22. století. AI agenti a automatizace procesů pro firmy.</p></div>
 <nav aria-label="Obory"><h4>Obory</h4><a href="https://fundament22.com/ai-pro-e-shopy/">AI pro e‑shopy a retail</a><a href="https://fundament22.com/ai-pro-profesni-sluzby/">AI pro profesní služby</a><a href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě a velkoobchodu</a></nav>
 <nav aria-label="Profesní služby"><h4>Profesní služby</h4><a href="https://fundament22.com/ai-pro-ucetni/">AI pro účetní</a><a href="https://fundament22.com/ai-pro-advokaty/">AI pro advokáty a právníky</a><a href="https://fundament22.com/ai-v-hr/">AI v HR a náboru</a><a href="https://fundament22.com/ai-pro-marketingove-agentury/">AI pro marketingové agentury</a></nav>
-<nav aria-label="Kontakt"><h4>Kontakt</h4><a href="/#analyza">Konzultace zdarma</a><a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a><a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a><a href="https://adamku8.github.io/fundament22/">Podrobná verze webu</a></nav>
+<nav aria-label="Kontakt"><h4>Kontakt</h4><a href="https://calendar.app.google/v39ka3uchSRSSG2AA" target="_blank" rel="noopener">Konzultace zdarma</a><a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a><a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a><a href="https://fundament22.com/skilly/">Skilly</a></nav>
 </div>
-<div class="fbot"><span>Fundament 22 · AI firma pro 22. století</span><span></span></div>
+<div class="fbot"><span>Fundament 22 · Základy firmy pro 22. století.</span><span></span></div>
 </div></footer>
 <script>
 /* Ranní fronta: zprávy naskočí postupně, když se ukázka dostane na obrazovku. */
