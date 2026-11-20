@@ -313,6 +313,36 @@ footer nav{display:grid;gap:8px;align-content:start}
 @media(max-width:375px){.logo{font-size:17px}}
 @media(max-width:340px){.logo{font-size:15px}}
 .fbrand .wm{font-size:20px;letter-spacing:.02em;color:#fff}
+.ob6{grid-template-columns:1fr}
+@media(min-width:640px){.ob6{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.ob6{grid-template-columns:repeat(3,1fr)}}
+.ob .ico{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#FFF0E6;color:var(--or2);margin-bottom:14px}
+.ob6 h3{font-size:20px;line-height:1.2}
+.est a{font-weight:700}
+.who{display:grid;gap:28px;margin-top:26px;align-items:start}
+@media(min-width:860px){.who{grid-template-columns:1.1fr 1fr}}
+.story p{color:var(--ink2);margin-top:14px;font-size:18px}
+.story p:first-child{margin-top:0;color:var(--ink)}
+.ppl{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:26px}
+.pp{display:flex;align-items:center;gap:12px}
+.pp b{display:block;font-family:var(--disp);font-size:17px;line-height:1.2}
+.pp small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.runs ul{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:10px;font-size:16px;color:var(--ink2)}
+.runs ul:last-child{margin-bottom:0}
+.runs li{display:flex;gap:10px}
+.runs li::before{flex:none;font-weight:800}
+.runs .yes li::before{content:"✓";color:#127552}
+.runs .todo li::before{content:"○";color:var(--or2)}
+.saves .nums{justify-content:center;margin-top:14px}
+.saves .now{font-size:56px}
+.saves .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 0 6px;position:relative}
+.saves .steps::before{content:"";position:absolute;left:16%;right:16%;top:19px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.18),#FF7A2F 50%,rgba(255,255,255,.18))}
+.saves .st{position:relative;text-align:center}
+.saves .ic{width:40px;height:40px;border-radius:12px;margin:0 auto 8px;display:grid;place-items:center;background:#262A66;border:1px solid rgba(255,255,255,.14)}
+.saves .st.mid .ic{background:var(--grad);border-color:transparent;box-shadow:0 0 18px rgba(255,122,47,.5)}
+.saves .st b{display:block;font-size:14px;line-height:1.25;color:#fff}
+.saves .st span{display:block;font-size:12.5px;line-height:1.3;color:#A9ADCB;margin-top:2px}
+@media(max-width:600px){.saves .now{font-size:48px}.saves .st b{font-size:13px}.saves .st span{font-size:12px}}
 </style>
 </head>
 <body>
@@ -329,16 +359,13 @@ footer nav{display:grid;gap:8px;align-content:start}
 <div class="track">
 <article class="slide" aria-label="Příklad 1 ze 3"><div class="sh"><p class="k">Přijaté faktury a doklady</p><span class="pct">−90 %</span></div>
 <div class="nums"><span class="was">30 h</span><span class="arr">→</span><span class="now">3 h</span></div>
-<div class="tb" aria-hidden="true"><div class="br"><span>dnes</span><i></i></div><div class="br on"><span>s agentem</span><i style="width:10%"></i></div></div>
-<p>Agent je přečte, zařadí a připraví k zaúčtování. Vy je jen zkontrolujete.</p></article>
+<div class="steps"><div class="st"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9CCE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div><b>Doklad přijde</b><span>e‑mailem nebo skenem</span></div><div class="st mid"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M5 9h14v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 14h.01M15 14h.01"/></svg></div><b>Agent ho zpracuje</b><span>přečte, zařadí, připraví</span></div><div class="st"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CE7B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><b>Vy schválíte</b><span>jen kontrola</span></div></div></article>
 <article class="slide" aria-label="Příklad 2 ze 3"><div class="sh"><p class="k">Dotazy zákazníků e‑shopu</p><span class="pct">−60 %</span></div>
 <div class="nums"><span class="was">15 h</span><span class="arr">→</span><span class="now">6 h</span><span class="per">týdně</span></div>
-<div class="tb" aria-hidden="true"><div class="br"><span>dnes</span><i></i></div><div class="br on"><span>s agentem</span><i style="width:40%"></i></div></div>
-<p>U každého dotazu čeká odpověď s údaji z objednávky. Stačí ji schválit.</p></article>
+<div class="steps"><div class="st"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9CCE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></div><b>Dotaz přijde</b><span>e‑mailem nebo chatem</span></div><div class="st mid"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M5 9h14v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 14h.01M15 14h.01"/></svg></div><b>Agent připraví odpověď</b><span>s údaji z objednávky</span></div><div class="st"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CE7B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><b>Vy schválíte</b><span>a odešlete</span></div></div></article>
 <article class="slide" aria-label="Příklad 3 ze 3"><div class="sh"><p class="k">Odpovědi na poptávky</p><span class="pct">−63 %</span></div>
 <div class="nums"><span class="was">8 h</span><span class="arr">→</span><span class="now">3 h</span><span class="per">týdně</span></div>
-<div class="tb" aria-hidden="true"><div class="br"><span>dnes</span><i></i></div><div class="br on"><span>s agentem</span><i style="width:37.5%"></i></div></div>
-<p>Návrh odpovědi čeká připravený. Odpovíte týž den, ne za dva tři dny.</p></article>
+<div class="steps"><div class="st"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9CCE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></div><b>Poptávka přijde</b><span>z webu nebo e‑mailem</span></div><div class="st mid"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M5 9h14v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2zM9 14h.01M15 14h.01"/></svg></div><b>Agent připraví odpověď</b><span>návrh ještě týž den</span></div><div class="st"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7CE7B8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div><b>Vy schválíte</b><span>a odešlete</span></div></div></article>
 </div>
 <div class="foot"><span>Odhady, ne měření</span><div class="dots"><button type="button" aria-label="Příklad 1" aria-current="true"></button><button type="button" aria-label="Příklad 2" aria-current="false"></button><button type="button" aria-label="Příklad 3" aria-current="false"></button></div></div>
 </div>
@@ -349,15 +376,21 @@ footer nav{display:grid;gap:8px;align-content:start}
 <section id="obory"><div class="wrap">
 <p class="eyebrow">Obory</p>
 <h2>Kde to umíme zavést.</h2>
-<div class="grid3 ob">
-<article class="card"><h3><a href="https://fundament22.com/ai-pro-e-shopy/">E‑commerce a retail</a></h3><ul>
-<li>Odpovědi zákaznické podpory</li><li>Ranní přehled obratu po zemích</li><li>Kontrola PPC agentury</li><li>Překlady a ceny v mutacích</li></ul><a class="more" href="https://fundament22.com/ai-pro-e-shopy/">AI pro e‑shopy podrobně →</a></article>
-<article class="card"><h3><a href="https://fundament22.com/ai-pro-profesni-sluzby/">Profesní služby</a></h3><ul>
-<li>Zápisy ze schůzek a follow‑upy</li><li>Třídění pošty a úkolů</li><li>Hlídání termínů a lhůt</li><li>Podklady k fakturaci</li></ul><a class="more" href="https://fundament22.com/ai-pro-profesni-sluzby/">Účetní, advokáti, HR, agentury →</a></article>
-<article class="card"><h3><a href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">Výroba a velkoobchod</a></h3><ul>
-<li>Nabídky z poptávek</li><li>Podklady k reklamacím</li><li>Přehled objednávek a skladu</li><li>Upomínky pohledávek</li></ul><a class="more" href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě podrobně →</a></article>
+<div class="grid3 ob ob6">
+<article class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2.5l2.2 11h10.6L20.5 8H7"/></svg></span><h3><a href="https://fundament22.com/ai-pro-e-shopy/">E‑shopy a retail</a></h3><ul>
+<li>Odpovědi zákaznické podpory</li><li>Ranní přehled obratu po zemích</li><li>Kontrola PPC agentury</li></ul><a class="more" href="https://fundament22.com/ai-pro-e-shopy/">AI pro e‑shopy →</a></article>
+<article class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span><h3><a href="https://fundament22.com/ai-pro-ucetni/">Účetní a daňové kanceláře</a></h3><ul>
+<li>Vytěžování faktur a dokladů</li><li>Párování plateb</li><li>Upomínky pohledávek</li></ul><a class="more" href="https://fundament22.com/ai-pro-ucetni/">AI pro účetní →</a></article>
+<article class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-3 6a3 3 0 0 0 6 0zM19 8l-3 6a3 3 0 0 0 6 0z"/></svg></span><h3><a href="https://fundament22.com/ai-pro-advokaty/">Advokátní kanceláře</a></h3><ul>
+<li>Hlídání lhůt a termínů</li><li>Třídění pošty a datové schránky</li><li>Zápisy z jednání a follow‑upy</li></ul><a class="more" href="https://fundament22.com/ai-pro-advokaty/">AI pro advokáty →</a></article>
+<article class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.2a3.2 3.2 0 0 1 0 5.6M18 14.5c1.8.9 3 2.9 3 5.5"/></svg></span><h3><a href="https://fundament22.com/ai-v-hr/">HR a nábor</a></h3><ul>
+<li>Přehled reakcí na inzeráty</li><li>Odpovědi uchazečům</li><li>Onboarding nováčků</li></ul><a class="more" href="https://fundament22.com/ai-v-hr/">AI v HR a náboru →</a></article>
+<article class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3><a href="https://fundament22.com/ai-pro-marketingove-agentury/">Marketingové agentury</a></h3><ul>
+<li>Klientské reporty</li><li>Zápisy a follow‑upy</li><li>Podklady k fakturaci</li></ul><a class="more" href="https://fundament22.com/ai-pro-marketingove-agentury/">AI pro agentury →</a></article>
+<article class="card"><span class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l6 4v-4l6 4V5h6v16z"/><path d="M8 17h2M14 17h2"/></svg></span><h3><a href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">Výroba a velkoobchod</a></h3><ul>
+<li>Nabídky z poptávek</li><li>Podklady k reklamacím</li><li>Přehled objednávek a skladu</li></ul><a class="more" href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě →</a></article>
 </div>
-<p class="est">Podnikáte v jiném oboru? Projdeme to spolu na konzultaci.</p>
+<p class="est">Poradenství, architekti a další profese: <a href="https://fundament22.com/ai-pro-profesni-sluzby/">AI pro profesní služby</a>. Jiný obor? Projdeme to spolu na konzultaci.</p>
 <div class="cta"><a class="btn big" href="#analyza">Chci konzultaci zdarma</a></div>
 </div></section>
 
@@ -432,6 +465,25 @@ footer nav{display:grid;gap:8px;align-content:start}
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Co je AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Program, který dostane úkol, sám si najde podklady ve vašich systémech, připraví výsledek a pošle ho ke schválení. Nečeká na otázku jako chatbot, pracuje sám podle plánu."}}, {"@type": "Question", "name": "Čím se AI agent liší od běžné automatizace?", "acceptedAnswer": {"@type": "Answer", "text": "Běžná automatizace opakuje jeden krok podle pevných pravidel. Agent si poradí i s textem a výjimkami: přečte e‑mail nebo doklad, navrhne, co s ním, a nejasné případy nechá na člověku."}}, {"@type": "Question", "name": "Nahradí AI agenti zaměstnance?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Agent práci připraví a člověk ji zkontroluje a schválí. Lidem ubude rutina a zbude jim čas na práci, kde je potřeba úsudek."}}, {"@type": "Question", "name": "Kam agent posílá výsledky?", "acceptedAnswer": {"@type": "Answer", "text": "Do Slacku nebo e‑mailu. Tam je schválíte, upravíte, nebo vrátíte."}}, {"@type": "Question", "name": "Pro jakou firmu to dává smysl?", "acceptedAnswer": {"@type": "Answer", "text": "Pro firmu, kde se každý týden opakuje stejná ruční práce: doklady, dotazy zákazníků, nabídky, reporty nebo upomínky. Jestli je to váš případ, zjistíte na konzultaci."}}, {"@type": "Question", "name": "Kolik to stojí?", "acceptedAnswer": {"@type": "Answer", "text": "Úvodní konzultace na 30 minut je zdarma. První analýza má cenu podle rozsahu a nabídku na zavedení dostanete až po ní."}}]}
 </script>
+</div></section>
+
+<section id="kdo-jsme"><div class="wrap">
+<p class="eyebrow">Kdo jsme</p>
+<h2>Nejdřív jsme to postavili u sebe.</h2>
+<div class="who">
+<div class="story">
+<p>Jsme Petr Sedláček a Adam Kurzok. Než jsme začali stavět agenty jiným firmám, převedli jsme na ně rutinu ve vlastních firmách EXPANDO a LOCO.</p>
+<p>Firemní know‑how máme zapsané na jednom místě. Čtou z něj lidé i agenti, takže každý ví, co u nás platí. Agenti práci připravují, lidé rozhodují a schvalují.</p>
+<p>Proto víme, kde to drhne. Vyzkoušeli jsme si to na sobě.</p>
+<div class="ppl"><div class="pp"><span class="av">PS</span><div><b>Petr Sedláček</b><small>LOCO</small></div></div><div class="pp"><span class="av b">AK</span><div><b>Adam Kurzok</b><small>EXPANDO</small></div></div></div>
+</div>
+<div class="card runs">
+<p class="n">Co u nás běží</p>
+<ul class="yes"><li>Zapsané know‑how firmy, které se každý den doplňuje</li><li>Agenti ve Slacku pro obchod, podporu, marketing a vývoj</li><li>Každý vývojový úkol zpracuje agent a člověk schválí výsledek</li></ul>
+<p class="n">Co ještě ladíme</p>
+<ul class="todo"><li>Předávání práce mezi agenty bez člověka uprostřed</li></ul>
+</div>
+</div>
 </div></section>
 </main>
 

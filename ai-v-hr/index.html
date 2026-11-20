@@ -310,6 +310,36 @@ footer nav{display:grid;gap:8px;align-content:start}
 @media(max-width:375px){.logo{font-size:17px}}
 @media(max-width:340px){.logo{font-size:15px}}
 .fbrand .wm{font-size:20px;letter-spacing:.02em;color:#fff}
+.ob6{grid-template-columns:1fr}
+@media(min-width:640px){.ob6{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.ob6{grid-template-columns:repeat(3,1fr)}}
+.ob .ico{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#FFF0E6;color:var(--or2);margin-bottom:14px}
+.ob6 h3{font-size:20px;line-height:1.2}
+.est a{font-weight:700}
+.who{display:grid;gap:28px;margin-top:26px;align-items:start}
+@media(min-width:860px){.who{grid-template-columns:1.1fr 1fr}}
+.story p{color:var(--ink2);margin-top:14px;font-size:18px}
+.story p:first-child{margin-top:0;color:var(--ink)}
+.ppl{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:26px}
+.pp{display:flex;align-items:center;gap:12px}
+.pp b{display:block;font-family:var(--disp);font-size:17px;line-height:1.2}
+.pp small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.runs ul{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:10px;font-size:16px;color:var(--ink2)}
+.runs ul:last-child{margin-bottom:0}
+.runs li{display:flex;gap:10px}
+.runs li::before{flex:none;font-weight:800}
+.runs .yes li::before{content:"✓";color:#127552}
+.runs .todo li::before{content:"○";color:var(--or2)}
+.saves .nums{justify-content:center;margin-top:14px}
+.saves .now{font-size:56px}
+.saves .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:18px 0 6px;position:relative}
+.saves .steps::before{content:"";position:absolute;left:16%;right:16%;top:19px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,.18),#FF7A2F 50%,rgba(255,255,255,.18))}
+.saves .st{position:relative;text-align:center}
+.saves .ic{width:40px;height:40px;border-radius:12px;margin:0 auto 8px;display:grid;place-items:center;background:#262A66;border:1px solid rgba(255,255,255,.14)}
+.saves .st.mid .ic{background:var(--grad);border-color:transparent;box-shadow:0 0 18px rgba(255,122,47,.5)}
+.saves .st b{display:block;font-size:14px;line-height:1.25;color:#fff}
+.saves .st span{display:block;font-size:12.5px;line-height:1.3;color:#A9ADCB;margin-top:2px}
+@media(max-width:600px){.saves .now{font-size:48px}.saves .st b{font-size:13px}.saves .st span{font-size:12px}}
 </style>
 <style>
 .crumbs{font-size:13.5px;color:var(--ink3);margin:0 0 18px}.crumbs a{color:inherit}
