@@ -271,6 +271,40 @@ footer a{color:#C9CCE6}
 @media(max-width:600px){section{padding:44px 0}.hero{padding:40px 0 40px}.btn{width:100%;text-align:center}.top .btn{width:auto}.az{padding:44px 0 52px}.az .cal{width:100%;text-align:center}
 .free{margin-bottom:20px}.flow{gap:14px;margin-top:26px}.flownote{margin-top:20px}.queue .m{padding:12px 16px}.az .bar{margin-bottom:20px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+.saves{position:relative;background:linear-gradient(160deg,#1C2058 0%,#10143A 62%);box-shadow:0 26px 60px rgba(21,24,58,.3)}
+.saves::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);z-index:1}
+.saves .sh{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.saves .pct{flex:none;font-family:var(--mono);font-size:12px;font-weight:700;color:#10143A;background:linear-gradient(100deg,#FFB067,#FF7A2F);border-radius:999px;padding:4px 10px;white-space:nowrap}
+.saves .tb{display:grid;gap:7px;margin-top:16px}
+.saves .br{display:grid;grid-template-columns:82px 1fr;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#8E93BA}
+.saves .br i{display:block;height:8px;border-radius:8px;background:rgba(255,255,255,.16)}
+.saves .br.on{color:#FFB27A}
+.saves .br.on i{background:var(--grad);box-shadow:0 0 14px rgba(255,122,47,.5)}
+.cmp{display:grid;gap:16px;margin-top:34px}
+@media(min-width:760px){.cmp{grid-template-columns:repeat(3,1fr)}}
+.cmp .card{position:relative}
+.cmp dl{margin:14px 0 0;display:grid;gap:12px}
+.cmp dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.cmp dd{margin:2px 0 0;font-size:16px;color:var(--ink2)}
+.cmp .pick{position:absolute;top:-11px;left:22px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--or);border-radius:999px;padding:3px 10px}
+.faq{max-width:760px;margin:30px 0 0;display:grid;gap:10px}
+.faq details{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:0 20px}
+.faq summary{cursor:pointer;font-family:var(--disp);font-weight:700;font-size:18px;line-height:1.3;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;color:var(--or2);font-size:22px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 18px;color:var(--ink2)}
+footer{padding:44px 0 26px;font-size:14.5px}
+footer .wrap{display:block}
+footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
+.fcols{display:grid;gap:28px}
+@media(min-width:640px){.fcols{grid-template-columns:1fr 1fr}}
+@media(min-width:900px){.fcols{grid-template-columns:1.4fr 1fr 1fr 1fr}}
+.fbrand b{font-family:var(--disp);font-weight:800;font-size:18px;letter-spacing:.01em;color:#fff}
+.fbrand p{margin-top:8px;max-width:300px}
+footer h4{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8E93BA;margin:0 0 12px;font-weight:400}
+footer nav{display:grid;gap:8px;align-content:start}
+.fbot{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);font-size:13.5px}
 </style>
 </head>
 <body>
@@ -285,14 +319,17 @@ footer a{color:#C9CCE6}
 <p class="lead">AI agenti práci připraví. <b>Vy ji jen zkontrolujete.</b></p>
 <div class="saves" id="saves" role="region" aria-roledescription="karusel" aria-label="Tři příklady úspory času">
 <div class="track">
-<article class="slide" aria-label="Příklad 1 ze 3"><p class="k">Přijaté faktury a doklady</p>
+<article class="slide" aria-label="Příklad 1 ze 3"><div class="sh"><p class="k">Přijaté faktury a doklady</p><span class="pct">−90 %</span></div>
 <div class="nums"><span class="was">30 h</span><span class="arr">→</span><span class="now">3 h</span></div>
+<div class="tb" aria-hidden="true"><div class="br"><span>dnes</span><i></i></div><div class="br on"><span>s agentem</span><i style="width:10%"></i></div></div>
 <p>Agent je přečte, zařadí a připraví k zaúčtování. Vy je jen zkontrolujete.</p></article>
-<article class="slide" aria-label="Příklad 2 ze 3"><p class="k">Dotazy zákazníků e‑shopu</p>
+<article class="slide" aria-label="Příklad 2 ze 3"><div class="sh"><p class="k">Dotazy zákazníků e‑shopu</p><span class="pct">−60 %</span></div>
 <div class="nums"><span class="was">15 h</span><span class="arr">→</span><span class="now">6 h</span><span class="per">týdně</span></div>
+<div class="tb" aria-hidden="true"><div class="br"><span>dnes</span><i></i></div><div class="br on"><span>s agentem</span><i style="width:40%"></i></div></div>
 <p>U každého dotazu čeká odpověď s údaji z objednávky. Stačí ji schválit.</p></article>
-<article class="slide" aria-label="Příklad 3 ze 3"><p class="k">Odpovědi na poptávky</p>
+<article class="slide" aria-label="Příklad 3 ze 3"><div class="sh"><p class="k">Odpovědi na poptávky</p><span class="pct">−63 %</span></div>
 <div class="nums"><span class="was">8 h</span><span class="arr">→</span><span class="now">3 h</span><span class="per">týdně</span></div>
+<div class="tb" aria-hidden="true"><div class="br"><span>dnes</span><i></i></div><div class="br on"><span>s agentem</span><i style="width:37.5%"></i></div></div>
 <p>Návrh odpovědi čeká připravený. Odpovíte týž den, ne za dva tři dny.</p></article>
 </div>
 <div class="foot"><span>Odhady, ne měření</span><div class="dots"><button type="button" aria-label="Příklad 1" aria-current="true"></button><button type="button" aria-label="Příklad 2" aria-current="false"></button><button type="button" aria-label="Příklad 3" aria-current="false"></button></div></div>
@@ -341,7 +378,6 @@ footer a{color:#C9CCE6}
 <li><span class="dot">3</span><div class="fb"><span class="tag">cena podle rozsahu</span><h3>První analýza</h3><p>Spočítáme úsporu na vašich datech.</p></div></li>
 <li><span class="dot">4</span><div class="fb"><span class="tag">nabídka po analýze</span><h3>Zavedení a péče</h3><p>Postavíme, zaučíme lidi a hlídáme provoz.</p></div></li>
 </ol>
-<p class="flownote">Po každém kroku se rozhodujete znovu.</p>
 </div></section>
 
 <section class="az" id="analyza"><div class="in">
@@ -350,9 +386,56 @@ footer a{color:#C9CCE6}
 <div id="app" aria-live="polite"></div>
 <noscript><p>Formulář potřebuje zapnutý JavaScript. Můžete nám také napsat na <a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a>.</p></noscript>
 </div></section>
+
+<section id="co-je-ai-agent"><div class="wrap">
+<p class="eyebrow">Co je AI agent</p>
+<h2>AI agent, chatbot, nebo automatizace?</h2>
+<p class="sub">AI agent je program, který dostane úkol, sám si najde podklady a připraví výsledek ke schválení.</p>
+<div class="cmp">
+<article class="card"><h3>Chatbot</h3><dl>
+<div><dt>Co dělá</dt><dd>Odpovídá na otázky.</dd></div>
+<div><dt>Kdy pracuje</dt><dd>Když se ho někdo zeptá.</dd></div>
+<div><dt>Výsledek</dt><dd>Odpověď v chatu.</dd></div>
+<div><dt>Hodí se na</dt><dd>Dotazy návštěvníků webu.</dd></div></dl></article>
+<article class="card"><h3>Automatizace</h3><dl>
+<div><dt>Co dělá</dt><dd>Opakuje jeden krok podle pevných pravidel.</dd></div>
+<div><dt>Kdy pracuje</dt><dd>Když nastane přesně daná událost.</dd></div>
+<div><dt>Výsledek</dt><dd>Přenesená data.</dd></div>
+<div><dt>Hodí se na</dt><dd>Jednoduché přesuny dat mezi systémy.</dd></div></dl></article>
+<article class="card hl"><span class="pick">Tohle stavíme</span><h3>AI agent</h3><dl>
+<div><dt>Co dělá</dt><dd>Dostane úkol a připraví ho od začátku do konce.</dd></div>
+<div><dt>Kdy pracuje</dt><dd>Sám podle plánu, třeba každé ráno.</dd></div>
+<div><dt>Výsledek</dt><dd>Hotový podklad ke schválení.</dd></div>
+<div><dt>Hodí se na</dt><dd>Práci s textem, doklady a výjimkami.</dd></div></dl></article>
+</div>
+</div></section>
+
+<section class="white" id="otazky"><div class="wrap">
+<p class="eyebrow">Časté otázky</p>
+<h2>Na co se ptáte nejčastěji.</h2>
+<div class="faq">
+<details><summary>Co je AI agent?</summary><p>Program, který dostane úkol, sám si najde podklady ve vašich systémech, připraví výsledek a pošle ho ke schválení. Nečeká na otázku jako chatbot, pracuje sám podle plánu.</p></details>
+<details><summary>Čím se AI agent liší od běžné automatizace?</summary><p>Běžná automatizace opakuje jeden krok podle pevných pravidel. Agent si poradí i s textem a výjimkami: přečte e‑mail nebo doklad, navrhne, co s ním, a nejasné případy nechá na člověku.</p></details>
+<details><summary>Nahradí AI agenti zaměstnance?</summary><p>Ne. Agent práci připraví a člověk ji zkontroluje a schválí. Lidem ubude rutina a zbude jim čas na práci, kde je potřeba úsudek.</p></details>
+<details><summary>Kam agent posílá výsledky?</summary><p>Do Slacku nebo e‑mailu. Tam je schválíte, upravíte, nebo vrátíte.</p></details>
+<details><summary>Pro jakou firmu to dává smysl?</summary><p>Pro firmu, kde se každý týden opakuje stejná ruční práce: doklady, dotazy zákazníků, nabídky, reporty nebo upomínky. Jestli je to váš případ, zjistíte na konzultaci.</p></details>
+<details><summary>Kolik to stojí?</summary><p>Úvodní konzultace na 30 minut je zdarma. První analýza má cenu podle rozsahu a nabídku na zavedení dostanete až po ní.</p></details>
+</div>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Co je AI agent?", "acceptedAnswer": {"@type": "Answer", "text": "Program, který dostane úkol, sám si najde podklady ve vašich systémech, připraví výsledek a pošle ho ke schválení. Nečeká na otázku jako chatbot, pracuje sám podle plánu."}}, {"@type": "Question", "name": "Čím se AI agent liší od běžné automatizace?", "acceptedAnswer": {"@type": "Answer", "text": "Běžná automatizace opakuje jeden krok podle pevných pravidel. Agent si poradí i s textem a výjimkami: přečte e‑mail nebo doklad, navrhne, co s ním, a nejasné případy nechá na člověku."}}, {"@type": "Question", "name": "Nahradí AI agenti zaměstnance?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Agent práci připraví a člověk ji zkontroluje a schválí. Lidem ubude rutina a zbude jim čas na práci, kde je potřeba úsudek."}}, {"@type": "Question", "name": "Kam agent posílá výsledky?", "acceptedAnswer": {"@type": "Answer", "text": "Do Slacku nebo e‑mailu. Tam je schválíte, upravíte, nebo vrátíte."}}, {"@type": "Question", "name": "Pro jakou firmu to dává smysl?", "acceptedAnswer": {"@type": "Answer", "text": "Pro firmu, kde se každý týden opakuje stejná ruční práce: doklady, dotazy zákazníků, nabídky, reporty nebo upomínky. Jestli je to váš případ, zjistíte na konzultaci."}}, {"@type": "Question", "name": "Kolik to stojí?", "acceptedAnswer": {"@type": "Answer", "text": "Úvodní konzultace na 30 minut je zdarma. První analýza má cenu podle rozsahu a nabídku na zavedení dostanete až po ní."}}]}
+</script>
+</div></section>
 </main>
 
-<footer><div class="wrap"><span>Fundament 22 · AI firma pro 22. století</span><span><a href="https://adamku8.github.io/fundament22/">Podrobná verze webu</a> · <a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a> · <a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a></span></div></footer>
+<footer><div class="wrap">
+<div class="fcols">
+<div class="fbrand"><b>FUNDAMENT22</b><p>AI firma pro 22. století. AI agenti a automatizace procesů pro firmy.</p></div>
+<nav aria-label="Obory"><h4>Obory</h4><a href="https://fundament22.com/ai-pro-e-shopy/">AI pro e‑shopy a retail</a><a href="https://fundament22.com/ai-pro-profesni-sluzby/">AI pro profesní služby</a><a href="https://fundament22.com/ai-ve-vyrobe-a-velkoobchodu/">AI ve výrobě a velkoobchodu</a></nav>
+<nav aria-label="Profesní služby"><h4>Profesní služby</h4><a href="https://fundament22.com/ai-pro-ucetni/">AI pro účetní</a><a href="https://fundament22.com/ai-pro-advokaty/">AI pro advokáty a právníky</a><a href="https://fundament22.com/ai-v-hr/">AI v HR a náboru</a><a href="https://fundament22.com/ai-pro-marketingove-agentury/">AI pro marketingové agentury</a></nav>
+<nav aria-label="Kontakt"><h4>Kontakt</h4><a href="#analyza">Konzultace zdarma</a><a href="mailto:petr@locoglobal.ai">petr@locoglobal.ai</a><a href="https://adamku8.github.io/fundament22/demo/">Ukázka</a><a href="https://adamku8.github.io/fundament22/">Podrobná verze webu</a></nav>
+</div>
+<div class="fbot"><span>Fundament 22 · AI firma pro 22. století</span><span></span></div>
+</div></footer>
 <script>
 /* Posuvník tří příkladů úspory: sám se posouvá, po doteku nebo kliknutí zůstane stát. */
 (function(){
@@ -657,7 +740,7 @@ render();
   if(foot){
     var b=document.createElement("button"); b.type="button"; b.className="cset"; b.id="cSet"; b.textContent="Nastavení měření";
     b.addEventListener("click",function(){ bar.hidden=false; });
-    foot.appendChild(document.createTextNode(" · ")); foot.appendChild(b);
+    if(foot.textContent.trim()) foot.appendChild(document.createTextNode(" · ")); foot.appendChild(b);
   }
   /* Události: klik na tlačítko konzultace a na odkaz do kalendáře. */
   document.addEventListener("click",function(e){
