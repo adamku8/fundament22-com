@@ -642,7 +642,7 @@ const CONFIG = {
   contactName: "Petr Sedláček",
   contactEmail: "petr@locoglobal.ai",
   // Kam se odešle kontakt (POST, JSON). Prázdné = prototyp, nic se neodesílá.
-  submitUrl: "",
+  submitUrl: "https://script.google.com/macros/s/AKfycbzrRzWBLmW5Ytwv1tQ8GuSy7L3nRAslf6H_FpxVo6SeAnjpxb6wrLaOyjn7RGcaV_-A/exec",
   // Správce osobních údajů — doplnit před spuštěním.
   // Kalendář pro výběr termínu konzultace (stejný odkaz jako v podrobné verzi webu).
   calendarUrl: "https://calendar.app.google/v39ka3uchSRSSG2AA",
@@ -826,8 +826,12 @@ function leadForm(v,tasks){
     if(CONFIG.submitUrl){
       btn.disabled=true; btn.textContent="Odesílám…";
       try{
-        const r=await fetch(CONFIG.submitUrl,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+        /* text/plain: prostý požadavek bez preflightu, jinak ho Google Apps Script (fundament22-formular-apps-script.gs) odmítne. */
+        const r=await fetch(CONFIG.submitUrl,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(payload)});
         if(!r.ok) throw new Error(r.status);
+        const res=await r.json().catch(()=>null);
+        if(!res || res.ok!==true) throw new Error("zapis");
+        if(window.gtag) gtag("event","odeslany_pruvodce",{verdict:v.kind});
       }catch(x){
         btn.disabled=false; btn.textContent=cta+" →";
         err.innerHTML=`Odeslání se nezdařilo. Zkuste to znovu, nebo napište na <a href="mailto:${esc(CONFIG.contactEmail)}">${esc(CONFIG.contactEmail)}</a>.`;
