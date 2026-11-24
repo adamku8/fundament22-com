@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI tým pro e‑shop: prezentace | Fundament 22</title>
+<meta name="description" content="Prezentace na sedm slidů: čtyři AI agenti pro e‑shop, mantinely a pilot na dva měsíce.">
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#10143A">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/PlusJakartaSans-latin-ext-4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css">
+<style>
+:root{--ink:#15183A;--or:#E8541A;--or2:#FF7A2F;--dark:#10143A;--soft:#D9DBEF;--muted:#A9ADCB;
+--disp:'Plus Jakarta Sans',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;--grad:linear-gradient(100deg,#FF9A3D,#E8541A 55%,#C8327E)}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--dark);color:#fff;font-family:'DM Sans',system-ui,sans-serif;font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow:hidden}
+h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+.deck{height:100%;display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.deck::-webkit-scrollbar{display:none}
+.s{flex:none;width:100vw;height:100%;scroll-snap-align:start;overflow-y:auto;display:flex;align-items:center;justify-content:center;padding:84px 20px 96px;
+background:radial-gradient(900px 500px at 85% -10%,rgba(255,122,47,.18),transparent 65%),linear-gradient(160deg,#1C2058 0%,#10143A 62%)}
+.in{width:100%;max-width:980px}
+.k{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#FF9A3D;margin-bottom:16px}
+h1{font-size:clamp(40px,7vw,78px)}
+h2{font-size:clamp(30px,5vw,54px)}
+.lead{margin-top:22px;font-size:clamp(18px,2.2vw,22px);color:var(--soft);max-width:720px}
+.lead b,.hl{color:var(--or2)}
+.g{display:grid;gap:14px;margin-top:34px}
+@media(min-width:760px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+.c{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:20px 22px}
+.c h3{font-size:21px}
+.c p{margin-top:8px;font-size:16px;color:var(--soft)}
+.c .n{font-family:var(--mono);font-size:12px;color:#FF9A3D;letter-spacing:.1em;margin-bottom:8px}
+.c.ag h3{font-size:24px}
+.c.ag .gain{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.1);font-weight:700;font-size:15.5px;color:#fff}
+.c.ag .gain span{color:var(--or2)}
+.c.hot{border-color:rgba(255,122,47,.55);box-shadow:0 0 40px rgba(255,122,47,.12)}
+.pains{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:12px}
+@media(min-width:760px){.pains{grid-template-columns:1fr 1fr}}
+.pains li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:16px 18px;color:var(--soft);font-size:17px}
+.pains li b{color:#fff;display:block}
+.pains i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--grad);margin-top:9px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:10px;vertical-align:middle;background:#3DDC97}
+.dot.o{background:#FF9A3D}.dot.p{background:#C8327E}
+.c ul{margin:10px 0 0;padding-left:18px;font-size:16px;color:var(--soft)}
+.tl{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:12px;counter-reset:t}
+@media(min-width:760px){.tl{grid-template-columns:repeat(5,1fr)}}
+.tl li{counter-increment:t;position:relative;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px 16px 16px}
+.tl li::before{content:counter(t);display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--grad);font-family:var(--disp);font-weight:800;margin-bottom:12px}
+.tl b{display:block;font-size:17px}
+.tl span{display:block;margin-top:4px;font-size:15px;color:var(--muted)}
+.tl .end{border-color:rgba(255,122,47,.55)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-block;font-weight:700;font-size:17px;text-decoration:none;border-radius:12px;padding:15px 24px;background:var(--or);color:#fff;box-shadow:0 14px 40px rgba(232,84,26,.38)}
+.btn.gh{background:transparent;border:1px solid rgba(255,255,255,.3);box-shadow:none}
+.top{position:fixed;inset:0 0 auto 0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 22px;pointer-events:none}
+.top a{pointer-events:auto;color:#fff;text-decoration:none;font-family:var(--disp);font-weight:800;letter-spacing:-.02em;font-size:16px}
+.top a sup{color:#FF9A3D;font-size:10px}
+.top .x{font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.08em;color:var(--muted)}
+.nav{position:fixed;inset:auto 0 0 0;z-index:5;display:flex;justify-content:center;align-items:center;gap:16px;padding:18px 16px 22px;background:linear-gradient(0deg,rgba(16,20,58,.95),rgba(16,20,58,0))}
+.nav button{font:inherit;cursor:pointer;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;font-size:20px}
+.nav button:disabled{opacity:.3;cursor:default}
+.dots{display:flex;gap:8px}
+.dots button{width:9px;height:9px;padding:0;border:0;border-radius:9px;background:rgba(255,255,255,.3)}
+.dots button.on{width:24px;background:var(--or2)}
+.cnt{font-family:var(--mono);font-size:12px;color:var(--muted);min-width:44px;text-align:center}
+@media(max-width:600px){body{font-size:16px}.s{padding:70px 16px 96px;align-items:flex-start}.c{padding:16px 18px}.dots{display:none}}
+@media print{body{overflow:visible}.deck{display:block;overflow:visible}.s{width:100%;height:auto;min-height:100vh;page-break-after:always}.nav,.top{display:none}}
+</style>
+</head>
+<body>
+<header class="top"><a href="/ai-pro-e-shopy/">FUNDAMENT<sup>22</sup></a><span class="x">AI tým pro e‑shop</span></header>
+
+<main class="deck" id="deck">
+
+<section class="s" aria-label="Slide 1"><div class="in">
+<p class="k">Problém</p>
+<h2>Data máte všude. Každý den se na ně nedívá nikdo.</h2>
+<ul class="pains">
+<li><i></i><div><b>Peníze utíkají v reklamě</b>Za vyprodané zboží a za položky, které nikdo nekupuje.</div></li>
+<li><i></i><div><b>O problémech víte pozdě</b>Rozbitá platba nebo feed se zjistí až z propadu tržeb.</div></li>
+<li><i></i><div><b>E‑maily jdou plošně všem</b>Nejlepší zákazníci nedostanou osobní péči.</div></li>
+<li><i></i><div><b>Podpora se topí v rutině</b>„Kde je moje zásilka“, spam a stále stejné dotazy.</div></li>
+</ul>
+</div></section>
+
+<section class="s" aria-label="Slide 2"><div class="in">
+<p class="k">Řešení</p>
+<h1>AI tým pro <span class="hl">e‑shop</span>.</h1>
+<p class="lead">Čtyři agenti, kteří každý den projdou data, navrhnou konkrétní kroky a po vašem schválení je provedou. <b>Bez vašeho souhlasu se nic nestane.</b></p>
+</div></section>
+
+<section class="s" aria-label="Slide 3"><div class="in">
+<p class="k">Tým</p>
+<h2>Každý agent dělá jednu věc pořádně.</h2>
+<div class="g g2">
+<article class="c ag"><p class="n">01</p><h3>REPORTER</h3><p>Ranní přehled tržeb a objednávek. Upozorní na výpadek platby, dopravy nebo feedu.</p><p class="gain">Přínos: <span>víte to první, ne poslední</span></p></article>
+<article class="c ag"><p class="n">02</p><h3>SPENDER</h3><p>Hledá reklamu na vyprodané zboží, položky bez objednávek a ztrátové produkty na srovnávačích.</p><p class="gain">Přínos: <span>ušetřené koruny za měsíc</span></p></article>
+<article class="c ag"><p class="n">03</p><h3>CUSTOMER</h3><p>Návrhy odpovědí na stav objednávky. Hlídá zpožděné zásilky, negativní recenze a spam.</p><p class="gain">Přínos: <span>hodiny podpory navíc</span></p></article>
+<article class="c ag hot"><p class="n">04</p><h3>MAILER</h3><p>Malé cílené kampaně podle nákupů místo plošných newsletterů. Osobní e‑maily pro VIP zákazníky.</p><p class="gain">Přínos: <span>tržby navíc z e‑mailů</span></p></article>
+</div>
+</div></section>
+
+<section class="s" aria-label="Slide 4"><div class="in">
+<p class="k">Co mají společné</p>
+<h2>Jeden tým, ne čtyři nástroje.</h2>
+<div class="g g3">
+<article class="c"><h3>Jedna paměť zákazníka</h3><p>Agenti o sobě vědí. Zákazník s otevřenou reklamací nedostane prodejní e‑mail.</p></article>
+<article class="c"><h3>Jedno místo ke schválení</h3><p>Ráno přijde zpráva na e‑mail nebo WhatsApp. Návrhy schválíte jedním klepnutím v mobilu.</p></article>
+<article class="c"><h3>Záznam všeho</h3><p>Vidíte, co agent navrhl, kdo to schválil a jaký to mělo výsledek.</p></article>
+</div>
+</div></section>
+
+<section class="s" aria-label="Slide 5"><div class="in">
+<p class="k">Mantinely</p>
+<h2>Rozhodujete vy.</h2>
+<div class="g g3">
+<article class="c"><h3><span class="dot"></span>Automaticky</h3><ul><li>Ranní přehled a upozornění</li><li>Zavření zjevného spamu</li></ul></article>
+<article class="c"><h3><span class="dot o"></span>Po schválení</h3><ul><li>Vypnutí reklamy na produkt</li><li>Odpovědi zákazníkům</li><li>Odeslání kampaně</li></ul></article>
+<article class="c"><h3><span class="dot p"></span>Nikdy</h3><ul><li>Změny cen</li><li>Storna a refundace</li><li>VIP e‑maily odesíláte vždy sami</li></ul></article>
+</div>
+</div></section>
+
+<section class="s" aria-label="Slide 6"><div class="in">
+<p class="k">Pilot na 2 měsíce</p>
+<h2>Začneme tam, kde je výsledek nejrychleji.</h2>
+<ol class="tl">
+<li><b>Data a výchozí stav</b><span>Napojíme zdroje a změříme, kde jste dnes.</span></li>
+<li><b>REPORTER a SPENDER</b><span>První úspory a ranní přehled.</span></li>
+<li><b>MAILER</b><span>První cílené kampaně.</span></li>
+<li><b>CUSTOMER</b><span>Podpora, až bude důvěra.</span></li>
+<li class="end"><b>Vyhodnocení v korunách</b><span>Kolik se ušetřilo a vydělalo navíc.</span></li>
+</ol>
+</div></section>
+
+<section class="s" aria-label="Slide 7"><div class="in">
+<p class="k">Další krok</p>
+<h2>Tři minuty na dotazník. Návrh na míru vašemu e‑shopu.</h2>
+<p class="lead">Podle odpovědí připravíme, kterým agentem začít a co od pilotu čekat.</p>
+<div class="cta"><a class="btn" href="/dotaznik-eshop/">Vyplnit dotazník</a><a class="btn gh" href="/#analyza">Konzultace zdarma</a></div>
+</div></section>
+
+</main>
+
+<nav class="nav" aria-label="Ovládání prezentace">
+<button type="button" id="prev" aria-label="Předchozí slide">←</button>
+<div class="dots" id="dots"></div>
+<span class="cnt" id="cnt">1 / 7</span>
+<button type="button" id="next" aria-label="Další slide">→</button>
+</nav>
+
+<script>
+/* Ovládání prezentace: šipky, klávesy, tečky; aktuální slide drží hash #n. */
+(function(){
+  var deck=document.getElementById("deck"), slides=[].slice.call(deck.querySelectorAll(".s")),
+      dots=document.getElementById("dots"), cnt=document.getElementById("cnt"),
+      prev=document.getElementById("prev"), next=document.getElementById("next"), cur=0, tgt=0;
+  slides.forEach(function(_,i){
+    var b=document.createElement("button"); b.type="button"; b.setAttribute("aria-label","Slide "+(i+1));
+    b.addEventListener("click",function(){ go(i); }); dots.appendChild(b);
+  });
+  function go(i){ i=Math.max(0,Math.min(slides.length-1,i)); tgt=i; deck.scrollTo({left:i*deck.clientWidth}); }
+  function mark(i){
+    cur=i; cnt.textContent=(i+1)+" / "+slides.length; prev.disabled=i===0; next.disabled=i===slides.length-1;
+    [].forEach.call(dots.children,function(d,j){ d.classList.toggle("on",j===i); });
+    history.replaceState(null,"","#"+(i+1));
+  }
+  deck.addEventListener("scroll",function(){ var i=Math.round(deck.scrollLeft/deck.clientWidth); if(i!==cur) mark(i); },{passive:true});
+  deck.addEventListener("scrollend",function(){ tgt=cur; });
+  prev.addEventListener("click",function(){ go(tgt-1); }); next.addEventListener("click",function(){ go(tgt+1); });
+  document.addEventListener("keydown",function(e){
+    if(e.key==="ArrowRight"||e.key==="PageDown"||e.key===" "){ e.preventDefault(); go(tgt+1); }
+    else if(e.key==="ArrowLeft"||e.key==="PageUp"){ e.preventDefault(); go(tgt-1); }
+    else if(e.key==="Home") go(0); else if(e.key==="End") go(slides.length-1);
+  });
+  window.addEventListener("resize",function(){ deck.style.scrollBehavior="auto"; deck.scrollLeft=cur*deck.clientWidth; deck.style.scrollBehavior=""; });
+  window.addEventListener("hashchange",function(){ var n=parseInt(location.hash.slice(1),10); if(n&&n-1!==cur) go(n-1); });
+  var h=parseInt(location.hash.slice(1),10); mark(0);
+  if(h>1){ deck.style.scrollBehavior="auto"; deck.scrollLeft=(h-1)*deck.clientWidth; deck.style.scrollBehavior=""; mark(Math.min(h-1,slides.length-1)); tgt=cur; }
+})();
+</script>
+</body>
+</html>
