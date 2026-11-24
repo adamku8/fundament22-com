@@ -402,6 +402,59 @@ a.pp:hover .li{text-decoration:underline}
 .rules .card h3 i{flex:none;width:12px;height:12px;border-radius:50%;background:#3DDC97}
 .rules .card.ap h3 i{background:#FF9A3D}.rules .card.nv h3 i{background:#C8327E}
 .rules .card ul{margin:10px 0 0;padding-left:18px;font-size:15.5px;color:var(--ink2)}
+.org{position:relative;margin-top:34px;padding:28px 20px 22px;border-radius:22px;background:linear-gradient(170deg,#1C2058,#10143A 70%);color:#fff;overflow:hidden}
+.org::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.org .ot{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#FF9A3D;text-align:center}
+.org .lvl{display:flex;justify-content:center}
+.org .you{display:inline-flex;align-items:center;gap:12px;margin-top:14px;padding:12px 18px;border-radius:16px;background:#fff;color:var(--ink)}
+.org .you .ph{flex:none;width:26px;height:40px;border-radius:7px;border:2.5px solid var(--ink);position:relative}
+.org .you .ph::after{content:"";position:absolute;left:50%;bottom:3px;width:8px;height:2px;margin-left:-4px;border-radius:2px;background:var(--ink)}
+.org .you b{display:block;font-family:var(--disp);font-size:17px}
+.org .you span{display:block;font-size:13.5px;color:var(--ink2);line-height:1.35}
+.org .up{display:flex;flex-direction:column;align-items:center;height:42px;justify-content:center;color:#FF9A3D}
+.org .up i{width:2px;flex:1;background:linear-gradient(0deg,rgba(255,154,61,.2),#FF9A3D)}
+.org .up em{font-style:normal;font-size:16px;line-height:1;margin-top:-3px;order:-1}
+.org .up small{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#A9ADCB;position:absolute;margin-left:150px}
+.org .boss{width:100%;max-width:440px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,122,47,.7);box-shadow:0 0 50px rgba(255,122,47,.18);text-align:center}
+.org .boss .bh{display:inline-flex;align-items:center;gap:10px}
+.org .boss h3{font-size:22px}
+.org .boss p{margin-top:6px;font-size:15px;color:#D9DBEF}
+.org .bus{position:relative;height:40px;margin:0 auto;max-width:760px}
+.org .bus::before{content:"";position:absolute;left:50%;top:0;height:20px;width:2px;margin-left:-1px;background:#FF9A3D}
+.org .bus::after{content:"";position:absolute;left:16.66%;right:16.66%;top:20px;height:20px;border:2px solid rgba(255,154,61,.55);border-bottom:0;border-radius:10px 10px 0 0}
+.org .team{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:760px;margin:0 auto}
+.org .ag{padding:14px 12px;border-radius:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);text-align:center}
+.org .ag .av{margin:0 auto 8px}
+.org .ag b{display:block;font-family:var(--disp);font-size:15.5px;letter-spacing:-.01em}
+.org .ag span{display:block;margin-top:4px;font-size:13.5px;line-height:1.35;color:#C9CCE6}
+.org .ag small{display:block;margin-top:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:#FFB27A}
+.org .smem{display:block;max-width:760px;margin:14px auto 0;padding:11px 14px;border-radius:12px;border:1px dashed rgba(255,255,255,.25);text-align:center;font-size:14px;color:#D9DBEF}
+.org .smem b{color:#fff}
+@media(max-width:600px){.org{padding:24px 12px 16px}.org .ag{padding:12px 6px}.org .ag span{font-size:12.5px}.org .ag b{font-size:14px}.org .up small{display:none}}
+.hub{margin-top:34px;display:grid;gap:12px}
+@media(min-width:640px){.hub{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.hub{grid-template-columns:repeat(3,1fr)}}
+.hub .core{display:flex;align-items:center;gap:16px;padding:20px 22px;border-radius:18px;background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.hub .core::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad)}
+.hub .core .ring{flex:none;display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.hub .core .ring .av{width:28px;height:28px;font-size:11px;border-radius:8px}
+.hub .core b{display:block;font-family:var(--disp);font-size:20px;letter-spacing:-.02em}
+.hub .core span{display:block;font-size:14px;color:#C9CCE6;line-height:1.4;margin-top:2px}
+.hub .core{order:-1}
+@media(min-width:960px){.hub .core{order:0;grid-column:2;grid-row:2}}
+.hub .sys{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.hub .sys .sh{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hub .sys h3{font-size:16.5px;letter-spacing:-.01em}
+.hub .sys .who{display:flex;gap:3px}
+.hub .sys .who i{font-style:normal;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;font-family:var(--disp);font-weight:800;font-size:10px;color:#fff;background:var(--grad)}
+.hub .sys .who i.b{background:linear-gradient(135deg,#6C8CFF,#3B5BDB)}.hub .sys .who i.g{background:linear-gradient(135deg,#3DDC97,#12936A)}.hub .sys .who i.v{background:linear-gradient(135deg,#B57CFF,#7A3FD6)}
+.hub .sys ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.hub .sys li{font-size:13.5px;color:var(--ink);background:rgba(21,24,58,.05);border-radius:8px;padding:4px 9px}
+.hub .sys li.api{color:var(--or2);background:#FFF0E6}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{font-style:normal;width:18px;height:18px;border-radius:5px;display:grid;place-items:center;font-family:var(--disp);font-weight:800;font-size:9.5px;color:#fff;background:var(--grad)}
+.legend i.b{background:linear-gradient(135deg,#6C8CFF,#3B5BDB)}.legend i.g{background:linear-gradient(135deg,#3DDC97,#12936A)}.legend i.v{background:linear-gradient(135deg,#B57CFF,#7A3FD6)}
 .deck{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:26px;padding:18px 20px;border-radius:16px;background:var(--dark);color:#fff}
 .deck p{margin:0;flex:1;min-width:220px;color:#D9DBEF}
 .deck b{color:#fff}
@@ -456,7 +509,20 @@ a.pp:hover .li{text-decoration:underline}
 <article class="card"><p class="n">03</p><h3>CUSTOMER</h3><p class="role">Ulehčí zákaznické podpoře</p><ul><li>Návrhy odpovědí s údaji z objednávky, třeba na „kde je moje zásilka“</li><li>Hlídá zpožděné zásilky, negativní recenze a zavírá spam</li></ul><p class="gain">Přínos: <span>hodiny podpory navíc</span></p></article>
 <article class="card new"><p class="n">04</p><h3>MAILER<span class="badge">novinka</span></h3><p class="role">Cílené e‑maily místo plošných</p><ul><li>Malé kampaně pro segmenty podle nákupů místo jednoho newsletteru všem</li><li>Osobní e‑maily pro nejlepší zákazníky, odesíláte je sami</li></ul><p class="gain">Přínos: <span>tržby navíc z e‑mailů</span></p></article>
 </div>
-<p class="est"><b>Jedna paměť zákazníka.</b> Agenti o sobě vědí, takže zákazník s otevřenou reklamací nedostane prodejní e‑mail. Každý návrh i výsledek se zapisuje, vidíte, kdo co schválil.</p>
+<div class="org" role="img" aria-label="Schéma: SPENDER, CUSTOMER a MAILER předávají výsledky REPORTEROVI, ten vám pošle jednu ranní zprávu.">
+<p class="ot">Jak spolupracují</p>
+<div class="lvl"><div class="you"><span class="ph" aria-hidden="true"></span><div><b>Vy</b><span>Jedna ranní zpráva na e‑mail nebo WhatsApp</span></div></div></div>
+<div class="up" aria-hidden="true"><em>▲</em><i></i></div>
+<div class="lvl"><div class="boss"><div class="bh"><div class="av b">R</div><h3>REPORTER</h3></div><p>Sbírá výsledky ostatních agentů, přidá tržby a výpadky a vše shrne do jedné zprávy.</p></div></div>
+<div class="bus" aria-hidden="true"></div>
+<div class="team">
+<div class="ag"><div class="av g">S</div><b>SPENDER</b><span>Úspory v reklamě</span><small>3 návrhy</small></div>
+<div class="ag"><div class="av">C</div><b>CUSTOMER</b><span>Odpovědi a recenze</span><small>9 odpovědí</small></div>
+<div class="ag"><div class="av v">M</div><b>MAILER</b><span>Kampaně a VIP</span><small>1 kampaň</small></div>
+</div>
+<p class="smem"><b>Sdílená paměť zákazníka</b> pod všemi agenty: kdo co koupil, reklamoval a jaký e‑mail dostal.</p>
+</div>
+
 </div></section>
 
 <section class="white"><div class="wrap split">
@@ -473,6 +539,25 @@ a.pp:hover .li{text-decoration:underline}
 <div class="m"><div class="av v">M</div><div class="mb"><div class="mh"><b>MAILER</b><time>07:00</time><span class="chip">1 kampaň</span></div><p>Zákazníkům, kteří před třemi měsíci koupili kávovar, docházejí kapsle. Kampaň pro 412 lidí je připravená.</p><div class="act"><span class="ok">Schválit</span><span class="no">Náhled</span></div></div></div>
 <div class="qf"><b>Rozhodujete vy:</b> schválit, upravit, nebo vrátit.</div>
 </div>
+</div></section>
+
+<section id="napojeni"><div class="wrap">
+<p class="eyebrow">Napojení</p>
+<h2>Pracuje s tím, co už používáte.</h2>
+<p class="sub">Agenti se připojí k e‑shopu, účetnictví, reklamě i e‑mailům. Nic neměníte, jen povolíte přístup ke čtení.</p>
+<div class="hub">
+<article class="sys"><div class="sh"><h3>E‑shop</h3><span class="who"><i class="b">R</i><i class="g">S</i><i>C</i><i class="v">M</i></span></div><ul><li>Shoptet</li><li>WooCommerce</li><li>Shopify</li><li>Upgates</li><li class="api">vlastní e‑shop přes API</li></ul></article>
+<article class="sys"><div class="sh"><h3>Účetnictví a sklad</h3><span class="who"><i class="b">R</i><i class="g">S</i></span></div><ul><li>Pohoda</li><li>ABRA Flexi</li><li>Money S3</li><li>iDoklad</li></ul></article>
+<article class="sys"><div class="sh"><h3>Reklama</h3><span class="who"><i class="g">S</i><i class="b">R</i></span></div><ul><li>Google Ads</li><li>Sklik</li><li>Meta Ads</li></ul></article>
+<article class="sys"><div class="sh"><h3>Srovnávače a feedy</h3><span class="who"><i class="g">S</i></span></div><ul><li>Heureka</li><li>Zboží.cz</li><li>Google Merchant Center</li></ul></article>
+<div class="core"><div class="ring" aria-hidden="true"><div class="av b">R</div><div class="av g">S</div><div class="av">C</div><div class="av v">M</div></div><div><b>AI tým</b><span>Čte z vašich systémů, zapisuje jen po schválení.</span></div></div>
+<article class="sys"><div class="sh"><h3>E‑mailing</h3><span class="who"><i class="v">M</i></span></div><ul><li>Ecomail</li><li>SmartEmailing</li><li>Mailchimp</li><li>Klaviyo</li></ul></article>
+<article class="sys"><div class="sh"><h3>Zákaznická podpora</h3><span class="who"><i>C</i></span></div><ul><li>Gmail</li><li>Outlook</li><li>SupportBox</li><li>LiveAgent</li><li>Freshdesk</li></ul></article>
+<article class="sys"><div class="sh"><h3>Doprava</h3><span class="who"><i>C</i><i class="b">R</i></span></div><ul><li>Zásilkovna</li><li>PPL</li><li>DPD</li><li>GLS</li><li>Balíkovna</li></ul></article>
+<article class="sys"><div class="sh"><h3>Analytika a recenze</h3><span class="who"><i class="b">R</i><i>C</i></span></div><ul><li>Google Analytics 4</li><li>Search Console</li><li>Heureka recenze</li><li>Google recenze</li></ul></article>
+</div>
+<div class="legend"><span><i class="b">R</i>REPORTER</span><span><i class="g">S</i>SPENDER</span><span><i>C</i>CUSTOMER</span><span><i class="v">M</i>MAILER</span></div>
+<p class="est">Seznam je ukázka. <b>Systém s API napojíme</b>, i když tu chybí. Co používáte vy, projdeme na konzultaci.</p>
 </div></section>
 
 <section id="mantinely"><div class="wrap">
